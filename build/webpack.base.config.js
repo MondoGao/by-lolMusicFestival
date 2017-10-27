@@ -1,6 +1,6 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
-const htmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const { publicPath } = require('../settings');
 
@@ -43,7 +43,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new htmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
     new webpack.optimize.CommonsChunkPlugin({
@@ -51,6 +51,9 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       wx: 'weixin-js-sdk',
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
     }),
   ],
 };
