@@ -16,10 +16,36 @@ module.exports = smart(baseConfig, {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: [
+          /\.global\.css$/,
+          /node_modules.*\.css$/,
+        ],
         use: [
           'style-loader',
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          'postcss-loader',
+        ],
+      },
+      {
+        test: /^((?!\.global).)*\.css$/,
+        exclude: /node_modules/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              sourceMap: true,
+              camelCase: true,
+              importLoaders: 1,
+              localIdentName: '[name]__[local]__[hash:base64:5]',
+            },
+          },
           'postcss-loader',
         ],
       },
