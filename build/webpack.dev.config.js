@@ -29,6 +29,10 @@ module.exports = smart(baseConfig, {
       },
     ],
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+  ],
   devServer: {
     port,
     publicPath,

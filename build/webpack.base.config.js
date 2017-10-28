@@ -10,7 +10,6 @@ module.exports = {
   entry: {
     index: './src/index.js',
     vendor: [
-      'zepto',
       'ramda',
     ],
   },
@@ -56,5 +55,9 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
     }),
   ],
+
+  externals: {
+    zepto: 'Zepto',
+  },
 };
 
