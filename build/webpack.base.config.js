@@ -10,9 +10,8 @@ module.exports = {
   entry: {
     index: './src/index.js',
     vendor: [
-      'react',
-      'react-dom',
-      'react-router-dom',
+      'zepto',
+      'ramda',
     ],
   },
 

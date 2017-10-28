@@ -4,9 +4,6 @@
     browser: true
   extends:
     - airbnb-base
-    - plugin:react/recommended
-  plugins:
-    - react
   rules:
     import/no-extraneous-dependencies: 0
     global-require: 0

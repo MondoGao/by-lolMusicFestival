@@ -8,7 +8,6 @@ const { publicPath, port } = require('../settings');
 module.exports = smart(baseConfig, {
   entry: {
     index: [
-      'react-hot-loader/patch',
       'whatwg-fetch',
       './src/index.js',
     ],
@@ -16,34 +15,13 @@ module.exports = smart(baseConfig, {
   module: {
     rules: [
       {
-        test: [
-          /\.global\.css$/,
-          /node_modules.*\.css$/,
-        ],
+        test: /\.css$/,
         use: [
           'style-loader',
           {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
-            },
-          },
-          'postcss-loader',
-        ],
-      },
-      {
-        test: /^((?!\.global).)*\.css$/,
-        exclude: /node_modules/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              sourceMap: true,
-              camelCase: true,
-              importLoaders: 1,
-              localIdentName: '[name]__[local]__[hash:base64:5]',
             },
           },
           'postcss-loader',
@@ -51,10 +29,6 @@ module.exports = smart(baseConfig, {
       },
     ],
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
-  ],
   devServer: {
     port,
     publicPath,
