@@ -44,6 +44,14 @@ module.exports = {
           name: 'fonts/[name].[ext]?[hash:7]',
         },
       },
+      {
+        test: /\.(mp3)$/,
+        loader: 'file-loader',
+        options: {
+          context: resolve(__dirname, '../src/assets'),
+          name: 'assets/[path][name].[ext]?[hash:7]',
+        },
+      },
     ],
   },
   plugins: [

@@ -34,21 +34,24 @@ function switchNextPage($page, $nextPage) {
   $nextPage.addClass('show');
 }
 
-function createOption(desc, audioSrc, options, answerIndex) {
+function createOption(desc, options, answerIndex) {
   return {
     desc,
-    audioSrc,
     options,
     answerIndex,
   };
 }
 
 const quizData = [
-  createOption('播放上面的音乐，在下方选出其代表的英雄角色名', '', ['麦冬', '然然', '萌萌', '杰杰'], 0),
-  createOption('播放上面的音乐，在下方选出其代表的英雄角色名', '', ['麦冬', '然然', '萌萌', '杰杰'], 1),
+  createOption('播放上面的音乐，在下方选出其代表的英雄角色名', ['麦冬', '然然', '萌萌', '杰杰'], 0),
+  createOption('播放上面的音乐，在下方选出其代表的英雄角色名', ['麦冬', '然然', '萌萌', '杰杰'], 1),
 ];
 
-const optionResolveContext = require.context('./assets/quiz', true, /\.png$/);
+const optionResolveContext = require.context('./assets/quiz', true, /\.(png|mp3)$/);
+
+const audioController = {
+
+};
 
 const quizer = {
   init() {
@@ -94,7 +97,7 @@ const quizer = {
       $clickedCard.addClass('wrongAnswer');
     }
 
-    setTimeout(this.switchQuiz, 500);
+    setTimeout(this.switchQuiz, 1000);
   },
   switchQuiz() {
     if (this.fail === this.MAX_FAIL || this.current === this.total - 1) {
