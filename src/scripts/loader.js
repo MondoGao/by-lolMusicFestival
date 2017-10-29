@@ -23,7 +23,7 @@ loader.on('complete', () => {
   });
 
   Object.values(assets).forEach((url) => {
-    if (url.match(/\.mp3|Bg|Background|\.ttf/)) {
+    if (url.match(/\.mp3|Bg|Background/)) {
       musicLoader.add(url);
     }
   });
@@ -36,7 +36,7 @@ function load() {
     .then((data) => {
       assets = data;
       Object.values(data).forEach((url) => {
-        if (url.match(/\.mp3|Bg|Background|\.ttf/)) {
+        if (url.match(/\.mp3|Bg|Background/)) {
           return;
         }
 
