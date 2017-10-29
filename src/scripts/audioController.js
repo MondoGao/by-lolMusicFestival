@@ -80,4 +80,4 @@ const audioController = {
   },
 };
 
-module.exports = audioController;
+export default audioController;

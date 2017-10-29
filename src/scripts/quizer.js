@@ -153,4 +153,4 @@ const quizer = {
   },
 };
 
-module.exports = quizer;
+export default quizer;
