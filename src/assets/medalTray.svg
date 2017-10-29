@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="358px" height="303px" viewBox="0 0 358 303" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>container</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-7-Copy-2" transform="translate(-196.000000, -171.000000)">
+            <g id="container" transform="translate(201.000000, 176.000000)">
+                <path d="M46.4769582,245 L72.9539164,288.185071" id="Triangle" stroke="#F6D194" stroke-width="3"></path>
+                <polyline id="Triangle" stroke="#F6D194" stroke-width="3" points="274 288.185071 300.476958 245 300.476958 245"></polyline>
+                <path d="M5.30717164,147.149685 L149.607806,1.38899317" id="Path-9" stroke="#F6D194"></path>
+                <path d="M346.967001,148.042508 L202.666367,2.28181596" id="Path-9" stroke="#F6D194"></path>
+                <polyline id="Path-6" stroke="#F6D194" stroke-width="6" points="46.1882828 215.61708 0 171.716363 69.6769934 101.688783 108.813113 101.688783 108.813113 67.9623648 175.49869 1.13686838e-13 242.885423 67.9623648 242.885423 101.688783 279.861792 101.688783 348.671923 171.716363 303.271632 215.61708"></polyline>
+                <circle id="Oval" fill="#F6D194" cx="46.098063" cy="243.661718" r="4"></circle>
+                <circle id="Oval" fill="#F6D194" cx="300.450973" cy="243.868784" r="4"></circle>
+                <polyline id="Path-7" stroke="#F6D194" stroke-width="4" points="64 239 94.9248204 286.185071 255.471349 286.185071 283.699198 239"></polyline>
+                <path d="M106.5,297.5 L242.5,297.5" id="Line" stroke="#F6D194" stroke-linecap="square"></path>
+                <polygon id="Path-11" fill="#F6D194" points="96.4722829 67.9710446 96.4722829 86.3870079 78.4440022 86.3870079"></polygon>
+                <polygon id="Path-11" fill="#F6D194" transform="translate(264.181230, 76.898869) scale(-1, 1) translate(-264.181230, -76.898869) " points="273.195371 67.6908875 273.195371 86.1068508 255.16709 86.1068508"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
