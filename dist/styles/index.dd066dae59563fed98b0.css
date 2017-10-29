@@ -545,11 +545,18 @@ a:visited {
 }
 
 @font-face {
-  font-family: MFBanHei;
-  font-weight: light;
+  font-family: "MFBanHei";
+  src: url(/lol/fonts/MFBanHei.eot?8c7730d);
+  /* IE9 */
+  src: url(/lol/fonts/MFBanHei.eot?8c7730d?#iefix) format("embedded-opentype"), 
+
+  url(/lol/fonts/MFBanHei.woff?bf68b57) format("woff"), 
+  url(/lol/fonts/MFBanHei.ttf?7c4d784) format("truetype"), 
+
+  url(/lol/assets/_/fonts/MFBanHei.svg?0652b2c#MFBanHei) format("svg");
+  /* iOS 4.1- */
   font-style: normal;
-  src: url(/lol/fonts/MFBanHei.otf?a3d3f49) format('opentype'),
-    url(/lol/fonts/MFBanHei.ttf?515f244) format('truetype');
+  font-weight: normal;
 }
 
 @-webkit-keyframes spin {

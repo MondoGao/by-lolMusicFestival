@@ -1,4 +1,5 @@
 {
+  "/lol/assets/_/fonts/MFBanHei.svg": "/lol/assets/_/fonts/MFBanHei.svg?0652b2c",
   "/lol/assets/board.svg": "/lol/assets/board.svg?172e470",
   "/lol/assets/btn.svg": "/lol/assets/btn.svg?bf487fe",
   "/lol/assets/btnLarge.svg": "/lol/assets/btnLarge.svg?8ea68a8",
@@ -58,9 +59,10 @@
   "/lol/assets/ranks/silver.svg": "/lol/assets/ranks/silver.svg?4731def",
   "/lol/assets/resultBg.png": "/lol/assets/resultBg.png?05db26a",
   "/lol/assets/timer.svg": "/lol/assets/timer.svg?fd890bf",
-  "/lol/fonts/MFBanHei.otf": "/lol/fonts/MFBanHei.otf?a3d3f49",
-  "/lol/fonts/MFBanHei.ttf": "/lol/fonts/MFBanHei.ttf?515f244",
-  "/lol/index.css": "/lol/styles/index.95ad5f669e7a55d296df.css",
-  "/lol/index.js": "/lol/scripts/index.95ad5f669e7a55d296df.js",
-  "/lol/vendor.js": "/lol/scripts/vendor.95ad5f669e7a55d296df.js"
+  "/lol/fonts/MFBanHei.eot": "/lol/fonts/MFBanHei.eot?8c7730d",
+  "/lol/fonts/MFBanHei.ttf": "/lol/fonts/MFBanHei.ttf?7c4d784",
+  "/lol/fonts/MFBanHei.woff": "/lol/fonts/MFBanHei.woff?bf68b57",
+  "/lol/index.css": "/lol/styles/index.dd066dae59563fed98b0.css",
+  "/lol/index.js": "/lol/scripts/index.dd066dae59563fed98b0.js",
+  "/lol/vendor.js": "/lol/scripts/vendor.dd066dae59563fed98b0.js"
 }
