@@ -96,11 +96,15 @@ img {
   background-position: top center;
   overflow-x: hidden;
   overflow-y: auto;
+  transition: transform 1s;
+  transform: translateX(100%);
 
   &.show {
+    transform: translateX(0);
   }
 
   &.finish {
+    transform: translateX(-100%);
   }
 }
 
@@ -213,6 +217,7 @@ img {
     padding-top: 200px;
     width: 100%;
     height: 100%;
+    pointer-events: none;
 
     & .logo {
       width: 345px;
@@ -234,9 +239,13 @@ img {
   & .start {
     display: inline-block;
     margin-top: 82px;
-    width: 313px;
-    height: 92px;
-    background: url(./assets/homeBtn.png) repeat center/contain;
+    padding-top: 28px;
+    width: 311px;
+    height: 91px;
+    background: url(./assets/homeBtn.svg) no-repeat center/contain;
+    font-size: 36px;
+    color: var(--thirdColor);
+    letter-spacing: 5px;
   }
 }
 
