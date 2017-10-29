@@ -7,12 +7,12 @@ import audioController from './audioController';
 
 import { switchNextPage } from './helpers';
 
-const optionResolveContext = require.context('../assets/quiz', true, /\.(png|mp3)$/);
+const optionResolveContext = require.context('../assets/quiz', true, /\.(jpg|mp3)$/);
 const rankResolveContext = require.context('../assets/ranks', false, /\.svg$/);
 
 const quizer = {
   init() {
-    this.MAX_FAIL = 3;
+    this.MAX_FAIL = 999;
 
     this.current = 0;
     this.total = quizData.length;
@@ -114,10 +114,11 @@ const quizer = {
       audioController.isLocked = false;
     }
   },
-  createAnswerCard(quizIndex, optionIndex, desc) {
+  createAnswerCard(quizIndex, optionIndex, desc, hasImage = true) {
     const card = $(`
       <li class="answerCard">
-        <img src="${optionResolveContext(`./${quizIndex + 1}/${optionIndex + 1}.png`)}" alt=""/>
+        ${hasImage ?
+            `<img src="${optionResolveContext(`./${quizIndex + 1}/${optionIndex + 1}.jpg`)}" alt=""/>` : ''}
         <span>${desc}</span>
       </li>
     `);
@@ -151,9 +152,14 @@ const quizer = {
     if (!this.isEnded()) {
       const quiz = quizData[this.current];
       const cards = quiz.options
-        .map((option, index) => this.createAnswerCard(this.current, index, option));
+        .map((option, index) => this.createAnswerCard(this.current, index, option, quiz.hasImage));
 
       this.$quizAnwsers.empty();
+      if (!quiz.hasImage) {
+        this.$quizAnwsers.addClass('text');
+      } else {
+        this.$quizAnwsers.removeClass('text');
+      }
 
       cards.forEach((card) => {
         this.$quizAnwsers.append(card);

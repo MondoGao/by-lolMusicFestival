@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="330px" height="139px" viewBox="0 0 330 139" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>carda</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#000000" stop-opacity="0.406901042" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <path d="M1,119.840852 L0,21.2723877 C1.04072876,21.4341733 2.1175235,21.5190701 3.22000879,21.5190701 C12.1780723,21.5190701 19.4400176,15.9140915 19.4400176,9 L310,9 C310,15.9140915 317.261945,21.5190701 326.220009,21.5190701 C326.740489,21.5190701 327.255243,21.5001486 327.76318,21.4631483 C328.170281,21.5001486 328.582846,21.5190701 329,21.5190701 C329.336472,21.5190701 329.669958,21.50676 330,21.4825821 L330,119.840852" id="path-2"></path>
+        <path d="M165.327239,36.6700403 L131.292291,10.1061782 L199.362188,10.1061782 L165.327239,36.6700403 Z M164.880008,29.570813 C167.089147,29.570813 168.880008,27.779952 168.880008,25.570813 C168.880008,23.361674 167.089147,21.570813 164.880008,21.570813 C162.670869,21.570813 160.880008,23.361674 160.880008,25.570813 C160.880008,27.779952 162.670869,29.570813 164.880008,29.570813 Z" id="path-3"></path>
+        <filter x="-7.3%" y="-11.3%" width="114.7%" height="141.4%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.319151947 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-7" transform="translate(-23.000000, -762.000000)">
+            <g id="carda" transform="translate(23.000000, 762.000000)">
+                <path d="M329.5,119.509094 L329.5,13.490906 C329.333725,13.4969639 329.16704,13.5 329,13.5 C321.711552,13.5 315.772114,7.72419953 315.509088,0.5 L13.4909123,0.5 C13.2339273,7.55827941 7.55827941,13.2339273 0.5,13.4909123 L0.5,119.509088 C7.72419953,119.772114 13.5,125.711552 13.5,133 C13.5,134.903658 13.1053152,136.75148 12.3538873,138.451636 L316.646108,138.451635 C315.894684,136.751477 315.5,134.903655 315.5,133 C315.5,125.544156 321.544156,119.5 329,119.5 C329.16704,119.5 329.333725,119.503036 329.5,119.509094 Z" id="Combined-Shape" stroke="#F6D194"></path>
+                <g id="Combined-Shape">
+                    <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <path stroke="#F6D194" stroke-width="1" d="M1.49495311,119.340852 L329.5,119.340852 L329.5,22.0103006 C329.333725,22.0161423 329.167041,22.0190701 329,22.0190701 C328.569944,22.0190701 328.142272,21.9996638 327.799506,21.961827 C327.276728,21.9999084 326.749849,22.0190701 326.220009,22.0190701 C317.223483,22.0190701 309.849138,16.4883236 309.512038,9.5 L19.9279801,9.5 C19.5908799,16.4883236 12.2165348,22.0190701 3.22000879,22.0190701 C2.30391337,22.0190701 1.39715672,21.9617864 0.505872388,21.8486838 L1.49495311,119.340852 Z"></path>
+                </g>
+                <g id="Combined-Shape">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use stroke="#F6D194" stroke-width="1" fill="#F6D194" fill-rule="evenodd" xlink:href="#path-3"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -437,6 +437,56 @@ img {
     margin: 42px auto 0;
     width: calc(750px - 46px);
     height: calc(234px * 2 + 31px);
+
+    &.text {
+      height: calc(139px * 2 + 31px);
+
+      & .answerCard {
+        height: 139px;
+
+        & span {
+          display: inline-block;
+          top: 44px;
+          left: 0;
+          width: 100%;
+          font-size: 38px;
+          text-align: center;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: url(./assets/cardText.svg) no-repeat center / contain;
+        }
+
+        &.congratulation::after,
+        &.rightAnswer::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: url(./assets/cardAnswer.svg) no-repeat center / 100%;
+          animation: fadeIn 0.3s;
+        }
+
+        &.wrongAnswer::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: url(./assets/cardSelect.svg) no-repeat center / 100%;
+          animation: fadeIn 0.3s;
+        }
+      }
+    }
   }
 
   & .answerCard {
@@ -484,6 +534,7 @@ img {
       background: url(./assets/cardAnswer.svg) no-repeat center / contain;
       animation: fadeIn 0.3s;
     }
+
     &.wrongAnswer::after {
       content: "";
       position: absolute;
