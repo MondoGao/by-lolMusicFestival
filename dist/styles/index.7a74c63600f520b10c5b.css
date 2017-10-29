@@ -1,0 +1,1201 @@
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+
+figure {
+  margin: 1em 0.533333rem;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+.hairlines button:-moz-focusring,
+.hairlines [type="button"]:-moz-focusring,
+.hairlines [type="reset"]:-moz-focusring,
+.hairlines [type="submit"]:-moz-focusring {
+  outline: 0.5px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -0.026667rem;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10-.
+ */
+
+[hidden] {
+  display: none;
+}html,
+body,
+div,
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  letter-spacing: 0.026667rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+a,
+a:hover,
+a:focus,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+@font-face {
+  font-family: MFBanHei;
+  font-weight: light;
+  font-style: normal;
+  src: url(/lol/fonts/MFBanHei.otf?a3d3f49) format('opentype'),
+    url(/lol/fonts/MFBanHei.ttf?515f244) format('truetype');
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes slideDown {
+  from {
+    -webkit-transform: translateY(-40%);
+    transform: translateY(-40%);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    -webkit-transform: translateY(-40%);
+    transform: translateY(-40%);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  color: #f6d194;
+  background: #000;
+  font-family: MFBanHei, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 6.666667rem;
+  perspective: 6.666667rem;
+  overflow: hidden;
+}
+
+img {
+  max-width: 10rem;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-size: cover;
+  background-position: top center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.page.show {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.page.finish {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+#load {
+  padding-top: 18%;
+  text-align: center;
+  background-color: #0a0c10;
+  z-index: 10;
+}
+
+#load h4 {
+  margin-top: 1.6rem;
+  color: #fbedd7;
+  letter-spacing: 0.0592rem;
+  font-size: 0.426667rem;
+}
+
+#load .loadingWrapper {
+  position: relative;
+  margin: 0.52rem auto 0;
+  width: 7.853333rem;
+  height: 0.133333rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+#load .loadingWrapper span {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fbeac6), to(#f6d194));
+  background-image: linear-gradient(to right, #fbeac6, #f6d194);
+  -webkit-transition: left 0.5s;
+  transition: left 0.5s;
+}
+
+#load .logoWrapper {
+  position: relative;
+  height: 7.186667rem;
+  line-height: 7.186667rem;
+}
+
+#load .loadingLogo {
+  width: 3.773333rem;
+  height: 4.52rem;
+  vertical-align: middle;
+}
+
+#load .circleWrapper {
+  position: absolute;
+  left: 1.406667rem;
+  width: 7.186667rem;
+  height: 7.186667rem;
+}
+
+#load .circleWrapper .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background-position: center;
+  -webkit-animation: spin infinite linear;
+  animation: spin infinite linear;
+}
+
+#load .circleWrapper .circle1 {
+  width: 100%;
+  background-image: url(/lol/assets/circle1.svg?ff006b4);
+  background-size: 100%;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+}
+
+#load .circleWrapper .circle2 {
+  background-size: 77.9%;
+  background-image: url(/lol/assets/circle2.svg?6555d0e);
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+}
+
+#load .circleWrapper .circle3 {
+  background-size: 66.7%;
+  background-image: url(/lol/assets/circle3.svg?eb682a1);
+  -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+}
+
+#load .circleWrapper .circle4 {
+  background-size: 63.7%;
+  background-image: url(/lol/assets/circle4.svg?8b26d89);
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+}
+
+#load .circleWrapper .circle5 {
+  background-position: 77% 88%;
+  background-size: 18.55288%;
+  background-image: url(/lol/assets/circle5.svg?463aba1);
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+}
+
+/* Home */
+
+#home {
+  padding-top: 9.146667rem;
+  text-align: center;
+  background-image: url(/lol/assets/homeBottomHl.png?f2cdb33), url(/lol/assets/homeBackground.png?fc5f0f3);
+}
+
+#home .logoWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 2.666667rem;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#home .logoWrapper .logo {
+  width: 4.6rem;
+}
+
+#home .logoWrapper .logoHl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#home .title {
+  width: 7.746667rem;
+  height: 2.933333rem;
+}
+
+#home .start {
+  display: inline-block;
+  margin-top: 1.093333rem;
+  padding-top: 0.373333rem;
+  width: 4.146667rem;
+  height: 1.213333rem;
+  background: url(/lol/assets/homeBtn.svg?c1b86a8) no-repeat center/contain;
+  font-size: 0.48rem;
+  color: #1e1510;
+  letter-spacing: 0.066667rem;
+}
+
+/* Quiz */
+
+#quiz {
+  padding-top: 0.533333rem;
+  background-image: url(/lol/assets/quizBg.png?e588ad3);
+}
+
+#quiz .levelWrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 0.066667rem 0.066667rem 0 0;
+  text-align: right;
+}
+
+#quiz .level {
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+  padding-right: 0.32rem;
+  width: 3.546667rem;
+  height: 0.64rem;
+  line-height: 0.64rem;
+  font-size: 0.32rem;
+  letter-spacing: 0.0444rem;
+  background: url(/lol/assets/label.svg?95ad4ae) center / contain;
+}
+
+#quiz .timerWrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 5.44rem;
+  height: 5.44rem;
+}
+
+#quiz .timerWrapper.paused .timer {
+  background: url(/lol/assets/play.svg?83c8d72) no-repeat center / 1.733333rem 1.733333rem;
+  font-size: 0;
+}
+
+#quiz .timerWrapper.paused .circle {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+#quiz .timer {
+  text-align: center;
+  height: 5.44rem;
+  line-height: 5.44rem;
+  background: url(/lol/assets/timer.svg?fd890bf) no-repeat center / 2.306667rem 2.386667rem;
+  color: #020002;
+  font-size: 0.72rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #d9b05b;
+  -webkit-transition: background 0.5s, font-size 0.3s;
+  transition: background 0.5s, font-size 0.3s;
+}
+
+.hairlines #quiz .timer {
+  -webkit-text-stroke-width: 0.5px;
+}
+
+#quiz .circleWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#quiz .circleWrapper .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background-position: center;
+  -webkit-animation: spin infinite linear;
+  animation: spin infinite linear;
+}
+
+#quiz .circleWrapper .circle1 {
+  width: 100%;
+  background-image: url(/lol/assets/circle1.svg?ff006b4);
+  background-size: 100%;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+}
+
+#quiz .circleWrapper .circle2 {
+  background-size: 77.9%;
+  background-image: url(/lol/assets/circle2.svg?6555d0e);
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+}
+
+#quiz .circleWrapper .circle3 {
+  background-size: 66.7%;
+  background-image: url(/lol/assets/circle3.svg?eb682a1);
+  -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+}
+
+#quiz .circleWrapper .circle4 {
+  background-size: 63.7%;
+  background-image: url(/lol/assets/circle4.svg?8b26d89);
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+}
+
+#quiz .circleWrapper .circle5 {
+  background-position: 77% 88%;
+  background-size: 24.5098%;
+  background-image: url(/lol/assets/circle5.svg?463aba1);
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+}
+
+#quiz .quizCount {
+  margin: 0.48rem 0 0.266667rem;
+  text-align: center;
+  font-size: 0.373333rem;
+  letter-spacing: 0.051867rem;
+}
+
+#quiz .quizCount::before,
+#quiz .quizCount::after {
+  content: "";
+  display: inline-block;
+  margin-right: 0.133333rem;
+  width: 3.92rem;
+  height: 0.386667rem;
+  background: url(/lol/assets/decorator.svg?bdef84b) no-repeat center / contain;
+}
+
+#quiz .quizCount::after {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  margin-right: 0;
+  margin-left: 0.133333rem;
+}
+
+#quiz .question {
+  margin: 0 auto;
+  width: 7.546667rem;
+  text-align: center;
+  font-size: 0.533333rem;
+  line-height: 0.733333rem;
+  letter-spacing: 0.073333rem;
+  text-shadow: -1px 0.04rem 1px rgba(0, 0, 0, .5), 0 0.026667rem #8c5730;
+}
+
+.hairlines #quiz .question {
+  text-shadow: -0.5px 1.5px 0.5px rgba(0, 0, 0, .5), 0 1px #8c5730;
+}
+
+#quiz .answerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  margin: 0.56rem auto 0;
+  width: 9.386667rem;
+  height: 6.653333rem;
+}
+
+#quiz .answerContainer.text {
+  height: 4.12rem;
+}
+
+#quiz .answerContainer.text .answerCard {
+  height: 1.853333rem;
+}
+
+#quiz .answerContainer.text .answerCard span {
+  display: inline-block;
+  top: 0.586667rem;
+  left: 0;
+  width: 100%;
+  font-size: 0.506667rem;
+  text-align: center;
+}
+
+#quiz .answerContainer.text .answerCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url(/lol/assets/cardText.svg?6a1b8a1) no-repeat center / contain;
+}
+
+#quiz .answerContainer.text .answerCard.congratulation::after,
+#quiz .answerContainer.text .answerCard.rightAnswer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url(/lol/assets/cardAnswer.svg?c140b84) no-repeat center / 100%;
+  -webkit-animation: fadeIn 0.3s;
+  animation: fadeIn 0.3s;
+}
+
+#quiz .answerContainer.text .answerCard.wrongAnswer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url(/lol/assets/cardSelect.svg?eef0e52) no-repeat center / 100%;
+  -webkit-animation: fadeIn 0.3s;
+  animation: fadeIn 0.3s;
+}
+
+#quiz .answerCard {
+  position: relative;
+  display: inline-block;
+  padding: 0.413333rem 0 0.253333rem;
+  width: 4.4rem;
+  height: 3.12rem;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  -webkit-animation: slideDown 0.8s;
+  animation: slideDown 0.8s;
+}
+
+#quiz .answerCard img {
+  width: 100%;
+  max-height: 100%;
+}
+
+#quiz .answerCard span {
+  position: absolute;
+  top: 0.68rem;
+  left: 0.293333rem;
+  font-size: 0.48rem;
+  letter-spacing: 0.066667rem;
+  text-shadow: -1px 0.04rem 1px rgba(0, 0, 0, .5), 0 0.026667rem #8c5730;
+}
+
+.hairlines #quiz .answerCard span {
+  text-shadow: -0.5px 1.5px 0.5px rgba(0, 0, 0, .5), 0 1px #8c5730;
+}
+
+#quiz .answerCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url(/lol/assets/card.svg?a3883ac) no-repeat center / contain;
+}
+
+#quiz .answerCard.congratulation::after,
+#quiz .answerCard.rightAnswer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url(/lol/assets/cardAnswer.svg?c140b84) no-repeat center / contain;
+  -webkit-animation: fadeIn 0.3s;
+  animation: fadeIn 0.3s;
+}
+
+#quiz .answerCard.wrongAnswer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url(/lol/assets/cardSelect.svg?eef0e52) no-repeat center / contain;
+  -webkit-animation: fadeIn 0.3s;
+  animation: fadeIn 0.3s;
+}
+
+/* Result */
+
+#result {
+  background-image: url(/lol/assets/resultBg.png?05db26a);
+}
+
+#result .medalContainer {
+  padding-top: 2.013333rem;
+  height: 6.813333rem;
+  text-align: center;
+  background: url(/lol/assets/medalTray.svg?71fa916) no-repeat center 2.346667rem / 4.653333rem 3.986667rem;
+}
+
+#result #medal {
+  margin-top: -0.4rem;
+  height: 5.333333rem;
+  width: 5.333333rem;
+}
+
+#result .board {
+  position: relative;
+  margin: 0.173333rem auto 0;
+  padding: 0.666667rem 1.093333rem 0.266667rem;
+  width: 9.306667rem;
+  height: 5.733333rem;
+  background: url(/lol/assets/board.svg?172e470) no-repeat center / contain;
+  color: #fbedd7;
+  text-align: center;
+  font-size: 0.426667rem;
+  letter-spacing: 0.0592rem;
+  line-height: 0.853333rem;
+}
+
+#result .board .highlight {
+  margin: 0 0.133333rem;
+  color: #f6d194;
+}
+
+#result .board h4 {
+  position: absolute;
+  top: -0.2rem;
+  left: 0;
+  width: 100%;
+  color: #f6d194;
+  font-size: 0.64rem;
+  letter-spacing: 0.088933rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f7cf94), to(#fadeb7));
+  background: linear-gradient(#f7cf94, #fadeb7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#result .btnContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 1.053333rem;
+  padding: 0 0.56rem;
+}
+
+#result .btn {
+  display: inline-block;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  margin-bottom: 0.546667rem;
+  width: 4.146667rem;
+  height: 1.093333rem;
+  line-height: 1.093333rem;
+  text-align: center;
+  font-size: 0.48rem;
+  color: #1e1510;
+  background: url(/lol/assets/btn.svg?bf487fe) no-repeat center / contain;
+  white-space: nowrap;
+  letter-spacing: 0.066667rem;
+}
+
+#result .btn.btnLarge {
+  width: 8.88rem;
+  background-image: url(/lol/assets/btnLarge.svg?8ea68a8);
+}

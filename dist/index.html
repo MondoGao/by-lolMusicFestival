@@ -1,0 +1,87 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+      <meta content="yes" name="apple-mobile-web-app-capable">
+      <meta content="yes" name="apple-touch-fullscreen">
+      <meta content="telephone=no,email=no" name="format-detection">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>英雄联盟音乐节</title>
+      <script charset="utf-8">
+        !function(e,t){function n(){t.body?t.body.style.fontSize=12*o+"px":t.addEventListener("DOMContentLoaded",n)}function d(){var e=i.clientWidth/10;i.style.fontSize=e+"px"}var i=t.documentElement,o=e.devicePixelRatio||1;if(n(),d(),e.addEventListener("resize",d),e.addEventListener("pageshow",function(e){e.persisted&&d()}),o>=2){var a=t.createElement("body"),s=t.createElement("div");s.style.border=".5px solid transparent",a.appendChild(s),i.appendChild(a),1===s.offsetHeight&&i.classList.add("hairlines"),i.removeChild(a)}}(window,document);
+      </script>
+    <link href="/lol/styles/index.7a74c63600f520b10c5b.css" rel="stylesheet"></head>
+    <body>
+      <div id="load" class="page show">
+        <div class="logoWrapper">
+          <div class="circleWrapper">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+            <div class="circle circle4"></div>
+            <div class="circle circle5"></div>
+          </div>
+          <img class="loadingLogo" src="/lol/assets/loadingLogo.png?56266e0" alt=""/>
+        </div>
+        <h4>音乐排位赛正在匹配中</h4>
+        <div class="loadingWrapper">
+          <span id="loadingStrip"></span>
+        </div>
+      </div>
+      <div id="home" class="page">
+        <div class="logoWrapper">
+          <img class="logo" src="/lol/assets/homeLogo.png?b1acfab" alt="Logo">
+          <img class="logoHl" src="/lol/assets/homeLogoHl.png?5af124f" alt="LogoHightlight">
+        </div>
+        <img class="title" src="/lol/assets/homeTitle.png?1c94b64" alt="Title">
+        <span id="btnStart" class="start">开始答题</span>
+      </div>
+      <div id="quiz" class="page">
+        <div class="levelWrapper">
+          <span class="level">
+            当前段位：<span id="shortRank">青铜</span>
+          </span>
+        </div>
+        <div id="timerWrapper" class="timerWrapper">
+          <div class="circleWrapper">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+            <div class="circle circle4"></div>
+            <div class="circle circle5"></div>
+          </div>
+          <div id="audioTimer" class="timer"></div>
+          <audio id="audio" style="display: none;">
+            请更新微信版本哦~
+          </audio>
+        </div>
+        <div class="quizCount">
+          <span id="quizCurrentNum">0</span> / <span id="quizTotalNum">0</span>
+        </div>
+        <div id="quizQuestion" class="question"></div>
+        <ul id="quizAnwsers" class="answerContainer"></ul>
+      </div>
+      <div id="result" class="page">
+        <div class="medalContainer">
+          <img id="medal" src="/lol/assets/ranks/bronze.svg?94e3cee" alt="">
+        </div>
+        <div class="board">
+          <h4 class="rank"></h4>
+          <p>
+            祝贺你，召唤师！<br>
+            你击败了全球<span id="beatPercent" class="highlight"></span>的玩家<br>
+            获得<span class="rank highlight">荣耀黄金</span>称号<br>
+            <span id="praise"></span>
+          </p>
+        </div>
+        <div class="btnContainer">
+          <span id="btnShare" class="btn">好友带飞</span>
+          <span id="btnReplay" class="btn">再次挑战</span>
+          <span id="btnJump" class="btn btnLarge"><a href="http://v.qq.com/live/p/topic/40842/preview.html?from=binyan">免费观看英雄联盟音乐节直播</a></span>
+        </div>
+      </div>
+      <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+      <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/lol/scripts/vendor.7a74c63600f520b10c5b.js"></script><script type="text/javascript" src="/lol/scripts/index.7a74c63600f520b10c5b.js"></script></body>
+  </html>
