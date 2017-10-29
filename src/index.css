@@ -52,6 +52,19 @@ h6 {
   }
 }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-40%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
 :root {
   --mainColor: #f6d194;
   --secondColor: #020002;
@@ -71,6 +84,7 @@ h6 {
 html,
 body {
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -79,6 +93,7 @@ body {
   font-family: var(--mainFont), BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   transform-style: preserve-3d;
   perspective: 500px;
+  overflow: hidden;
 }
 
 img {
@@ -392,6 +407,7 @@ img {
     width: 330px;
     height: 234px;
     flex: none;
+    animation: slideDown 0.8s;
 
     & img {
       width: 100%;

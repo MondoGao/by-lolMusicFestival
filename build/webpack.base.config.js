@@ -33,7 +33,8 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 128,
-          name: 'assets/[name].[ext]?[hash:7]',
+          context: resolve(__dirname, '../src/assets'),
+          name: 'assets/[path][name].[ext]?[hash:7]',
         },
       },
       {

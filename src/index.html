@@ -56,37 +56,10 @@
           </div>
         </div>
         <div class="quizCount">
-          <span>1</span> / <span>10</span>
+          <span id="quizCurrentNum">0</span> / <span id="quizTotalNum">0</span>
         </div>
-        <div class="question">
-          播放上面的音乐，在下方选出其代表的英雄角色名
-        </div>
-        <ul class="answerContainer">
-          <li class="answerCard">
-            <img src="<%= require('./assets/heroSample.png') %>" alt=""/>
-            <span>
-              辛德拉
-            </span>
-          </li>
-          <li class="answerCard">
-            <img src="<%= require('./assets/heroSample.png') %>" alt=""/>
-            <span>
-              辛德拉
-            </span>
-          </li>
-          <li class="answerCard">
-            <img src="<%= require('./assets/heroSample.png') %>" alt=""/>
-            <span>
-              辛德拉
-            </span>
-          </li>
-          <li class="answerCard">
-            <img src="<%= require('./assets/heroSample.png') %>" alt=""/>
-            <span>
-              辛德拉
-            </span>
-          </li>
-        </ul>
+        <div id="quizQuestion" class="question"></div>
+        <ul id="quizAnwsers" class="answerContainer"></ul>
       </div>
       <div id="result" class="page">
         <div class="medalContainer">
