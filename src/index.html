@@ -14,8 +14,20 @@
     </head>
     <body>
       <div id="load" class="page show">
-        <img src="" alt=""/>
-        <p>加载中.</p>
+        <div class="logoWrapper">
+          <div class="circleWrapper">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+            <div class="circle circle4"></div>
+            <div class="circle circle5"></div>
+          </div>
+          <img class="loadingLogo" src="<%= require('./assets/loadingLogo.png') %>" alt=""/>
+        </div>
+        <h4>音乐排位赛正在匹配中</h4>
+        <div class="loadingWrapper">
+          <span id="loadingStrip"></span>
+        </div>
       </div>
       <div id="home" class="page">
         <div class="logoWrapper">

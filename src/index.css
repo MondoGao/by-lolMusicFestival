@@ -20,6 +20,19 @@ a {
   letter-spacing: 2px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+.hide {
+  display: none;
+}
+
 @font-face {
   font-family: MFBanHei;
   font-weight: light;
@@ -43,10 +56,12 @@ a {
   --mainColor: #f6d194;
   --secondColor: #020002;
   --thirdColor: #1e1510;
+  --paraColor: #fbedd7;
   --mainBackgroundColor: #000;
   --loadBackgroundColor: #0a0c10;
   --mainFont: MFBanHei;
   --circlrWrapperWidth: 408;
+  --circleWrapperWidthLoading: 539;
 
   --mainTextShadow: {
     text-shadow: -1px 3px 1px rgba(0, 0, 0, 0.5), 0 2px #8c5730;
@@ -87,14 +102,109 @@ img {
   }
 }
 
-.load {
+#load {
+  padding-top: 18%;
+  text-align: center;
   background: var(--loadBackgroundColor);
+  z-index: 10;
+
+  & h4 {
+    margin-top: 120px;
+    color: var(--paraColor);
+    letter-spacing: 4.44px;
+    font-size: 32px;
+  }
+
+  & .loadingWrapper {
+    position: relative;
+    margin: 39px auto 0;
+    width: 589px;
+    height: 10px;
+    background-color: #fff;
+    overflow: hidden;
+
+    & span {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to right, #fbeac6, #f6d194);
+      transition: left 0.5s;
+    }
+  }
+
+  & .logoWrapper {
+    position: relative;
+    height: var(--circleWrapperWidthLoading)px;
+    line-height: var(--circleWrapperWidthLoading)px;
+  }
+
+  & .loadingLogo {
+    width: 283px;
+    height: 339px;
+    vertical-align: middle;
+  }
+
+  & .circleWrapper {
+    position: absolute;
+    left: calc((750 - var(--circleWrapperWidthLoading)) / 2)px;
+    width: var(--circleWrapperWidthLoading)px;
+    height: var(--circleWrapperWidthLoading)px;
+
+    & .circle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      background-position: center;
+      animation: spin infinite linear;
+    }
+
+    & .circle1 {
+      width: 100%;
+      background-image: url(./assets/circle1.svg);
+      background-size: 100%;
+      animation-duration: 10s;
+    }
+
+    & .circle2 {
+      background-size: 77.9%;
+      background-image: url(./assets/circle2.svg);
+      animation-duration: 6s;
+    }
+
+    & .circle3 {
+      background-size: 66.7%;
+      background-image: url(./assets/circle3.svg);
+      animation-duration: 8s;
+    }
+
+    & .circle4 {
+      background-size: 63.7%;
+      background-image: url(./assets/circle4.svg);
+      animation-duration: 5s;
+    }
+
+    & .circle5 {
+      background-position: 77% 88%;
+      background-size: calc(100 / var(--circleWrapperWidthLoading) * 100%);
+      background-image: url(./assets/circle5.svg);
+      animation-duration: 4s;
+    }
+  }
 }
 
 /* Home */
 #home {
   padding-top: 686px;
   text-align: center;
+  background-image: url(./assets/homeBottomHl.png), url(./assets/homeBackground.png);
+  background-size: cover;
+  background-position: top center;
 
   & .logoWrapper {
     position: absolute;
@@ -113,7 +223,6 @@ img {
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
     }
   }
 
@@ -133,8 +242,13 @@ img {
 
 /* Quiz */
 #quiz {
+  padding-top: 40px;
+
   & .levelWrapper {
-    padding: 34px 21px 22px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 5px 5px 0 0;
     text-align: right;
   }
 
@@ -162,6 +276,7 @@ img {
     line-height: calc(var(--circlrWrapperWidth) - 0)px;
     background: url(./assets/timer.svg) no-repeat center / 173px 179px;
     color: var(--secondColor);
+    font-size: 54px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #d9b05b;
   }
@@ -191,19 +306,19 @@ img {
     }
 
     & .circle2 {
-      background-size: calc(318 / var(--circlrWrapperWidth) * 100%);
+      background-size: 77.9%;
       background-image: url(./assets/circle2.svg);
       animation-duration: 6s;
     }
 
     & .circle3 {
-      background-size: calc(272 / var(--circlrWrapperWidth) * 100%);
+      background-size: 66.7%;
       background-image: url(./assets/circle3.svg);
       animation-duration: 8s;
     }
 
     & .circle4 {
-      background-size: calc(260 / var(--circlrWrapperWidth) * 100%);
+      background-size: 63.7%;
       background-image: url(./assets/circle4.svg);
       animation-duration: 5s;
     }
@@ -316,7 +431,7 @@ img {
     width: 698px;
     height: 430px;
     background: url(./assets/board.svg) no-repeat center / contain;
-    color: #fbedd7;
+    color: var(--paraColor);
     text-align: center;
     font-size: 32px;
     letter-spacing: 4.44px;
