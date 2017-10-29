@@ -50,12 +50,16 @@ a:visited {
 }
 
 @font-face {
-  font-family: MFBanHei;
-  font-weight: light;
+  font-family: "MFBanHei";
+  src: url("./fonts/MFBanHei.eot"); /* IE9 */
+  src: url("./fonts/MFBanHei.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+
+  url("./fonts/MFBanHei.woff") format("woff"), /* chrome、firefox */
+  url("./fonts/MFBanHei.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+
+  url("./fonts/MFBanHei.svg#MFBanHei") format("svg"); /* iOS 4.1- */
   font-style: normal;
-  src:
-    url(./fonts/MFBanHei.otf) format('opentype'),
-    url(./fonts/MFBanHei.ttf) format('truetype');
+  font-weight: normal;
 }
 
 @keyframes spin {
