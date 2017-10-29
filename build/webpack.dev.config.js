@@ -42,7 +42,7 @@ module.exports = smart(baseConfig, {
     compress: true,
     proxy: {
       '/rank': {
-        target: 'http://lol.hustonline.net',
+        target: 'https://weixin.bingyan-tech.hustonline.net/lol',
         changeOrigin: true,
       },
     },

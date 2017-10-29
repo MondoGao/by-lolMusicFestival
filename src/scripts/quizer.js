@@ -83,13 +83,13 @@ const quizer = {
         score: this.score,
       }),
     })
-      // .then(data => data.json())
-      .then(() => ({
-        data: {
-          beat_player_number: 50,
-          sum_player_number: 200,
-        }
-      }))
+      .then(data => data.json())
+    // .then(() => ({
+    // data: {
+    // beat_player_number: 50,
+    // sum_player_number: 200,
+    // }
+    // }))
       .then(({ data }) => {
         this.beatPlayerNum = data.beat_player_number;
         this.totalPlayerNum = data.sum_player_number;
@@ -148,7 +148,6 @@ const quizer = {
     audioController.play();
   },
   sync() {
-
     if (!this.isEnded()) {
       const quiz = quizData[this.current];
       const cards = quiz.options
