@@ -43,7 +43,7 @@
             当前段位：<span>青铜一</span>
           </span>
         </div>
-        <div class="timerWrapper">
+        <div id="timerWrapper" class="timerWrapper">
           <div class="circleWrapper">
             <div class="circle circle1"></div>
             <div class="circle circle2"></div>
@@ -51,9 +51,12 @@
             <div class="circle circle4"></div>
             <div class="circle circle5"></div>
           </div>
-          <div class="timer">
+          <div id="audioTimer" class="timer">
             10
           </div>
+          <audio id="audio" style="display: none;">
+            请更新微信版本哦~
+          </audio>
         </div>
         <div class="quizCount">
           <span id="quizCurrentNum">0</span> / <span id="quizTotalNum">0</span>

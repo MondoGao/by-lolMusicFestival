@@ -292,7 +292,21 @@ img {
 
   & .timerWrapper {
     position: relative;
+    margin: 0 auto;
+    width: var(--circlrWrapperWidth)px;
     height: var(--circlrWrapperWidth)px;
+
+    &.paused {
+      & .timer {
+        background: url(./assets/play.svg) no-repeat center / 130px 130px;
+        font-size: 0;
+      }
+
+      & .circle {
+        animation-play-state: paused;
+      }
+    }
+
   }
 
   & .timer {
@@ -304,13 +318,13 @@ img {
     font-size: 54px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #d9b05b;
+    transition: background 0.5s, font-size 0.3s;
   }
 
   & .circleWrapper {
     position: absolute;
-    left: calc((750 - var(--circlrWrapperWidth)) / 2)px;
-    width: var(--circlrWrapperWidth)px;
-    height: var(--circlrWrapperWidth)px;
+    width: 100%;
+    height: 100%;
 
     & .circle {
       position: absolute;
