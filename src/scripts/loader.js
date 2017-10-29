@@ -2,6 +2,7 @@ import $ from 'zepto';
 import preloader from 'preloader';
 
 import { switchNextPage } from './helpers';
+import { publicPath } from '../../settings';
 
 const loader = preloader({
   xhrImages: false,
@@ -18,7 +19,7 @@ loader.on('complete', () => {
 });
 
 function load() {
-  return fetch('/manifest.json')
+  return fetch(`${publicPath}manifest.json`)
     .then(data => data.json())
     .then((data) => {
       Object.values(data).forEach(url => loader.add(url));
