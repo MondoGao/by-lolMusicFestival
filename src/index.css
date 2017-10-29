@@ -33,6 +33,10 @@ body {
   perspective: 500px;
 }
 
+img {
+  max-width: 750px;
+}
+
 .page {
   position: absolute;
   top: 0;
@@ -42,7 +46,6 @@ body {
   background: var(--mainBackgroundColor);
   opacity: 0;
   transform: translateZ(-300px);
-  transition: all 1s;
 
   &.show {
     transform: translateZ(0);
@@ -50,10 +53,49 @@ body {
   }
 
   &.finish {
-    transform: translateZ(501px);
   }
 }
 
 .load {
   background: var(--loadBackgroundColor);
+}
+
+/* Home */
+.home {
+  padding-top: 686px;
+  text-align: center;
+
+  & .logoWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 200px;
+    width: 100%;
+    height: 100%;
+
+    & .logo {
+      width: 345px;
+    }
+
+    & .logoHl {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & .title {
+    width: 581px;
+    height: 220px;
+  }
+
+  & .start {
+    display: inline-block;
+    margin-top: 82px;
+    width: 313px;
+    height: 92px;
+    background: url(./assets/homeBtn.png) no-repeat center/contain;
+  }
 }
