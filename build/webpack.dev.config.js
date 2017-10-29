@@ -40,6 +40,12 @@ module.exports = smart(baseConfig, {
     contentBase: './dist',
     host: '0.0.0.0',
     compress: true,
+    proxy: {
+      '/rank': {
+        target: 'http://lol.hustonline.net',
+        changeOrigin: true,
+      },
+    },
   },
 });
 

@@ -51,9 +51,7 @@
             <div class="circle circle4"></div>
             <div class="circle circle5"></div>
           </div>
-          <div id="audioTimer" class="timer">
-            10
-          </div>
+          <div id="audioTimer" class="timer"></div>
           <audio id="audio" style="display: none;">
             请更新微信版本哦~
           </audio>
@@ -69,11 +67,11 @@
           <img src="<%= require('./assets/homeLogo.png') %>" alt="">
         </div>
         <div class="board">
-          <h4>荣耀黄金</h4>
+          <h4 class="rank">荣耀黄金</h4>
           <p>
             祝贺你，召唤师！<br>
-            你击败了全球<span class="highlight">99%</span>的玩家<br>
-            获得<span class="highlight">荣耀黄金</span>称号<br>
+            你击败了全球<span id="beatPercent" class="highlight">99%</span>的玩家<br>
+            获得<span class="rank highlight">荣耀黄金</span>称号<br>
             <span>
               是个不可多见的音乐和游戏双修天才啊！
             </span>

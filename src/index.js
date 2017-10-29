@@ -5,6 +5,8 @@ import 'normalize.css';
 
 import './index.css';
 
+import { publicPath } from '../settings.js';
+
 const loader = preloader({
   xhrImages: false,
 });
@@ -56,6 +58,7 @@ const audioController = {
     this.$timerWrapper = $('#timerWrapper');
     this.isPlaying = false;
     this.currentTime = 0;
+    this.isLocked = false;
 
     this.handleTimeupdate = this.handleTimeupdate.bind(this);
     this.handleDurationchange = this.handleDurationchange.bind(this);
@@ -75,6 +78,10 @@ const audioController = {
     this.sync();
   },
   toggle() {
+    if (this.isLocked) {
+      return;
+    }
+
     if (this.isPlaying) {
       this.pause();
     } else {
@@ -106,6 +113,7 @@ const audioController = {
     this.$audio.attr('src', nextSrc);
     this.$audio.currentTime = 0;
     this.isPlaying = false;
+    this.isLocked = false;
     this.handleDurationchange();
 
     this.sync();
@@ -135,10 +143,16 @@ const quizer = {
     this.fail = 0;
     this.isLocked = false;
 
+    this.beatPlayerNum = 0;
+    this.totalPlayerNum = 1;
+
     this.$currentNum = $('#quizCurrentNum');
     this.$totalNum = $('#quizTotalNum');
     this.$quizQuestion = $('#quizQuestion');
     this.$quizAnwsers = $('#quizAnwsers');
+
+    this.$ranks = $('.rank');
+    this.$beatPercent = $('#bearPercent');
 
     this.handleOptionClick = this.handleOptionClick.bind(this);
     this.switchQuiz = this.switchQuiz.bind(this);
@@ -153,6 +167,7 @@ const quizer = {
     }
 
     this.isLocked = true;
+    audioController.isLocked = true;
 
     audioController.pause();
 
@@ -166,6 +181,8 @@ const quizer = {
 
     if (isRight) {
       $rightCard.addClass('congratulation');
+
+      this.score += 10;
     } else {
       this.fail += 1;
 
@@ -175,15 +192,37 @@ const quizer = {
 
     setTimeout(this.switchQuiz, 1000);
   },
+  finish() {
+    fetch(`${publicPath}rank`, {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'x-www-form-urlencoded',
+      },
+      body: $.param({
+        score: this.score,
+      }),
+    })
+      .then(data => data.json())
+      .then(({ data }) => {
+        this.beatPlayerNum = data.beat_player_number;
+        this.totalPlayerNum = data.sum_player_number;
+
+        this.sync();
+
+        switchNextPage($('#quiz'), $('#result'));
+      });
+  },
   switchQuiz() {
     if (this.fail === this.MAX_FAIL || this.current === this.total - 1) {
-      switchNextPage($('#quiz'), $('#result'));
+      this.finish();
     } else {
       this.current += 1;
       this.sync();
-    }
 
-    this.isLocked = false;
+      this.isLocked = false;
+      audioController.isLocked = false;
+    }
   },
   createAnswerCard(quizIndex, optionIndex, desc) {
     const card = $(`
@@ -213,6 +252,8 @@ const quizer = {
     this.$quizQuestion.text(quiz.desc);
     this.$currentNum.text(this.current + 1);
     this.$totalNum.text(this.total);
+
+    this.$beatPercent.text(Math.ceil(this.beatPlayerNum / this.totalPlayerNum));
 
     audioController.switchAudio(optionResolveContext(`./${this.current + 1}/audio.mp3`));
 
