@@ -1,6 +1,7 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 const { publicPath } = require('../settings');
 
@@ -38,10 +39,16 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         loader: 'file-loader',
+        options: {
+          name: 'fonts/[name].[ext]?[hash:7]',
+        },
       },
     ],
   },
   plugins: [
+    new ManifestPlugin({
+      basePath: publicPath,
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),

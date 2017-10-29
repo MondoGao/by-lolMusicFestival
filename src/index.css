@@ -91,7 +91,9 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--mainBackgroundColor);
+  background-color: var(--mainBackgroundColor);
+  background-size: cover;
+  background-position: top center;
   overflow-x: hidden;
   overflow-y: auto;
 
@@ -105,7 +107,7 @@ img {
 #load {
   padding-top: 18%;
   text-align: center;
-  background: var(--loadBackgroundColor);
+  background-color: var(--loadBackgroundColor);
   z-index: 10;
 
   & h4 {
@@ -203,8 +205,6 @@ img {
   padding-top: 686px;
   text-align: center;
   background-image: url(./assets/homeBottomHl.png), url(./assets/homeBackground.png);
-  background-size: cover;
-  background-position: top center;
 
   & .logoWrapper {
     position: absolute;
@@ -243,6 +243,7 @@ img {
 /* Quiz */
 #quiz {
   padding-top: 40px;
+  background-image: url(./assets/quizBg.png);
 
   & .levelWrapper {
     position: absolute;
@@ -412,6 +413,8 @@ img {
 
 /* Result */
 #result {
+  background-image: url(./assets/resultBg.png);
+
   & .medalContainer {
     padding-top: 151px;
     height: 511px;
