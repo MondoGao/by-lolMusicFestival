@@ -40,7 +40,7 @@
       <div id="quiz" class="page">
         <div class="levelWrapper">
           <span class="level">
-            当前段位：<span>青铜一</span>
+            当前段位：<span id="shortRank">青铜</span>
           </span>
         </div>
         <div id="timerWrapper" class="timerWrapper">
@@ -64,7 +64,7 @@
       </div>
       <div id="result" class="page">
         <div class="medalContainer">
-          <img src="<%= require('./assets/homeLogo.png') %>" alt="">
+          <img id="medal" src="<%= require('./assets/ranks/bronze.svg') %>" alt="">
         </div>
         <div class="board">
           <h4 class="rank">荣耀黄金</h4>
@@ -72,7 +72,7 @@
             祝贺你，召唤师！<br>
             你击败了全球<span id="beatPercent" class="highlight"></span>的玩家<br>
             获得<span class="rank highlight">荣耀黄金</span>称号<br>
-            <span>
+            <span id="praise">
               是个不可多见的音乐和游戏双修天才啊！
             </span>
           </p>

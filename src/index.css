@@ -281,7 +281,7 @@ img {
     display: inline-block;
     vertical-align: top;
     text-align: right;
-    padding-right: 10px;
+    padding-right: 24px;
     width: 266px;
     height: 48px;
     line-height: 48px;
@@ -459,11 +459,12 @@ img {
     height: 511px;
     text-align: center;
     background: url(./assets/medalTray.svg) no-repeat center 176px / 349px 299px;
+  }
 
-    & img {
-      width: 293px;
-      height: 304px;
-    }
+  & #medal {
+    margin-top: -30px;
+    height: 400px;
+    width: 400px;
   }
 
   & .board {

@@ -2,12 +2,13 @@ import $ from 'zepto';
 
 import { publicPath } from '../../settings';
 import quizData from './quizData';
-import ranksData from './ranksData';
+import ranksData, { getRankName } from './ranksData';
 import audioController from './audioController';
 
 import { switchNextPage } from './helpers';
 
 const optionResolveContext = require.context('../assets/quiz', true, /\.(png|mp3)$/);
+const rankResolveContext = require.context('../assets/ranks', false, /\.svg$/);
 
 const quizer = {
   init() {
@@ -26,9 +27,11 @@ const quizer = {
     this.$totalNum = $('#quizTotalNum');
     this.$quizQuestion = $('#quizQuestion');
     this.$quizAnwsers = $('#quizAnwsers');
+    this.$shortRank = $('#shortRank');
 
     this.$ranks = $('.rank');
     this.$beatPercent = $('#beatPercent');
+    this.$medal = $('#medal');
 
     this.handleOptionClick = this.handleOptionClick.bind(this);
     this.switchQuiz = this.switchQuiz.bind(this);
@@ -67,6 +70,7 @@ const quizer = {
     }
 
     setTimeout(this.switchQuiz, 1000);
+    this.updateRank();
   },
   finish() {
     fetch(`${publicPath}rank`, {
@@ -96,13 +100,14 @@ const quizer = {
       });
   },
   isEnded() {
-    return this.fail === this.MAX_FAIL || this.current === this.total - 1;
+    return this.fail === this.MAX_FAIL || this.current === this.total;
   },
   switchQuiz() {
+    this.current += 1;
+
     if (this.isEnded()) {
       this.finish();
     } else {
-      this.current += 1;
       this.sync();
 
       this.isLocked = false;
@@ -123,33 +128,48 @@ const quizer = {
 
     return card;
   },
+  updateRank() {
+    const rankEngName = getRankName(this.score);
+    const rank = ranksData[rankEngName];
+
+    this.$shortRank.text(rank.name.slice(2));
+
+    this.$ranks.forEach((rankEl) => {
+      $(rankEl).text(rank.name);
+    });
+
+    this.$medal.attr('src', rankResolveContext(`./${rankEngName}.svg`));
+
+    $('#praise').text(rank.praise);
+  },
   sync() {
-    const quiz = quizData[this.current];
-    const cards = quiz.options
-      .map((option, index) => this.createAnswerCard(this.current, index, option));
 
     if (!this.isEnded()) {
+      const quiz = quizData[this.current];
+      const cards = quiz.options
+        .map((option, index) => this.createAnswerCard(this.current, index, option));
 
       this.$quizAnwsers.empty();
 
       cards.forEach((card) => {
         this.$quizAnwsers.append(card);
       });
+
+      this.$quizQuestion.text(quiz.desc);
+      this.$currentNum.text(this.current + 1);
+
+      audioController.switchAudio(optionResolveContext(`./${this.current + 1}/audio.mp3`));
+
+      if (this.current !== 0) {
+        audioController.play();
+      }
     }
 
-    this.$quizQuestion.text(quiz.desc);
-    this.$currentNum.text(this.current + 1);
     this.$totalNum.text(this.total);
 
-    console.log(this);
+    this.updateRank();
 
     this.$beatPercent.text(`${Math.ceil((this.beatPlayerNum / this.totalPlayerNum) * 100)}%`);
-
-    audioController.switchAudio(optionResolveContext(`./${this.current + 1}/audio.mp3`));
-
-    if (this.current !== 0) {
-      audioController.play();
-    }
   },
 };
 
