@@ -5,5 +5,6 @@ import 'normalize.css';
 import './index.css';
 
 $(() => {
-  console.log('finish');
+  $('#load').removeClass('show').addClass('finish');
+  $('#home').addClass('show');
 });

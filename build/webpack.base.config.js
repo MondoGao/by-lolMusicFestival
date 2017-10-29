@@ -48,15 +48,13 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
     }),
-    new webpack.ProvidePlugin({
-      wx: 'weixin-js-sdk',
-    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
     }),
   ],
 
   externals: {
+    wx: 'wx',
     zepto: 'Zepto',
   },
 };
