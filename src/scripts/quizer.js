@@ -142,6 +142,11 @@ const quizer = {
 
     $('#praise').text(rank.praise);
   },
+  replay() {
+    this.init();
+    switchNextPage('result', 'quiz');
+    audioController.play();
+  },
   sync() {
 
     if (!this.isEnded()) {

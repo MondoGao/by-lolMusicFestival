@@ -12,11 +12,17 @@ import { switchNextPage } from './scripts/helpers';
 load();
 
 $(() => {
-  const btnStart = $('#btnStart');
-
-  btnStart.on('click', () => {
+  $('#btnStart').on('click', () => {
     switchNextPage('home', 'quiz');
     audioController.play();
+  });
+
+  $('#btnShare').on('click', () => {
+    alert('点击右上角分享本网页哦~');
+  });
+
+  $('#btnReplay').on('click', () => {
+    quizer.replay();
   });
 
   quizer.init();
