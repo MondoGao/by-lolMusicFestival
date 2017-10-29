@@ -13,22 +13,45 @@ h6 {
   border: 0;
   padding: 0;
   box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+
+@font-face {
+  font-family: MFBanHei;
+  font-weight: normal;
+  font-style: normal;
+  src: url(./fonts/MFBanHei.otf) format('opentype');
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 :root {
+  --mainColor: #f6d194;
   --mainBackgroundColor: #000;
   --loadBackgroundColor: #0a0c10;
+  --mainFont: MFBanHei;
+  --circlrWrapperWidth: 408;
 }
 
 html,
 body {
   height: 100%;
-  background: #000;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 body {
+  color: var(--mainColor);
+  background: #000;
+  font-family: var(--mainFont);
+  overflow-x: hidden;
+  overflow-y: auto;
   transform-style: preserve-3d;
   perspective: 500px;
 }
@@ -44,12 +67,8 @@ img {
   width: 100%;
   height: 100%;
   background: var(--mainBackgroundColor);
-  opacity: 0;
-  transform: translateZ(-300px);
 
   &.show {
-    transform: translateZ(0);
-    opacity: 1;
   }
 
   &.finish {
@@ -61,7 +80,7 @@ img {
 }
 
 /* Home */
-.home {
+#home {
   padding-top: 686px;
   text-align: center;
 
@@ -96,6 +115,80 @@ img {
     margin-top: 82px;
     width: 313px;
     height: 92px;
-    background: url(./assets/homeBtn.png) no-repeat center/contain;
+    background: url(./assets/homeBtn.png) repeat center/contain;
+  }
+}
+
+/* Quiz */
+#quiz {
+  & .levelWrapper {
+    padding: 34px 21px 22px 0;
+    text-align: right;
+  }
+
+  & .level {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: 266px;
+    height: 48px;
+    line-height: 47px;
+    font-size: 24px;
+    background: url(./assets/label.svg) center/contain;
+  }
+
+  & .timerWrapper {
+    position: relative;
+    height: var(--circlrWrapperWidth)px;
+  }
+
+  & .circleWrapper {
+    position: absolute;
+    left: calc((750 - var(--circlrWrapperWidth)) / 2)px;
+    width: var(--circlrWrapperWidth)px;
+    height: var(--circlrWrapperWidth)px;
+
+    & .circle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      background-position: center;
+      animation: spin infinite linear;
+    }
+
+    & .circle1 {
+      width: 100%;
+      background-image: url(./assets/circle1.svg);
+      background-size: 100%;
+      animation-duration: 10s;
+    }
+
+    & .circle2 {
+      background-size: calc(318 / var(--circlrWrapperWidth) * 100)%;
+      background-image: url(./assets/circle2.svg);
+      animation-duration: 6s;
+    }
+
+    & .circle3 {
+      background-size: calc(272 / var(--circlrWrapperWidth) * 100)%;
+      background-image: url(./assets/circle3.svg);
+      animation-duration: 8s;
+    }
+
+    & .circle4 {
+      background-size: calc(260 / var(--circlrWrapperWidth) * 100)%;
+      background-image: url(./assets/circle4.svg);
+      animation-duration: 5s;
+    }
+
+    & .circle5 {
+      background-position: 77% 88%;
+      background-size: calc(100 / var(--circlrWrapperWidth) * 100)%;
+      background-image: url(./assets/circle5.svg);
+      animation-duration: 4s;
+    }
   }
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="295px" height="29px" viewBox="0 0 295 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title> decorator</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-7" transform="translate(-14.000000, -549.000000)">
+            <g id="-decorator" transform="translate(15.000000, 549.000000)">
+                <circle id="Oval-2" fill="#EFCB91" cx="282.5" cy="10.5" r="2.5"></circle>
+                <rect id="Rectangle-3" stroke="#F6D194" stroke-width="1.70000005" transform="translate(282.606602, 10.606602) rotate(45.000000) translate(-282.606602, -10.606602) " x="275.956602" y="3.95660174" width="13.3" height="13.3"></rect>
+                <rect id="Rectangle-3" stroke="#F6D194" stroke-width="0.5" transform="translate(282.500000, 10.500000) rotate(45.000000) translate(-282.500000, -10.500000) " x="278.25" y="6.25" width="8.5" height="8.5"></rect>
+                <circle id="Oval" stroke="#F6D194" cx="1.5" cy="10.5" r="1.5"></circle>
+                <circle id="Oval" fill="#F6D194" cx="204.5" cy="27.5" r="1.5"></circle>
+                <path d="M97.5,14 L275.881758,14" id="Line-2" stroke="#F6D194" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M3.5,10.5 L272.5,10.5" id="Line" stroke="#F6D194" stroke-linecap="square"></path>
+                <polyline id="Path-2" stroke="#F6D194" stroke-width="2" points="228.605135 13.9694535 235.89115 4.14177692 278.976575 4.14177692"></polyline>
+                <rect id="Rectangle-4" fill="#F6D194" x="209" y="26" width="74" height="3"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="274px" height="301px" viewBox="0 0 274 301" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>circle3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-7" transform="translate(-241.000000, -165.000000)">
+            <g id="timer" transform="translate(378.500000, 308.500000) rotate(90.000000) translate(-378.500000, -308.500000) translate(174.000000, 104.000000)">
+                <g id="circle3" transform="translate(57.000000, 68.000000)">
+                    <path d="M90.3225968,0.845522764 C48.4220738,18.5703268 16.4302463,55.1332074 4.96482876,99.9164501 M203.931858,272.717104 C237.896628,258.664839 265.460907,232.273981 281.03652,199.132707" id="Oval-8" stroke="#F6D194" stroke-width="1.133"></path>
+                    <polygon id="Triangle-2" fill="#F6D194" transform="translate(12.870821, 59.785104) rotate(299.000000) translate(-12.870821, -59.785104) " points="12.8708207 51.8541038 24.2008207 67.7161038 1.54082069 67.7161038"></polygon>
+                    <circle id="Oval-14" stroke="#F7D195" stroke-width="1.133" fill="#F6D194" cx="280.7885" cy="199.4395" r="8.4975"></circle>
+                    <circle id="Oval-16" stroke="#F6D194" stroke-width="1.133" cx="280.86334" cy="199.195817" r="23.2265"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

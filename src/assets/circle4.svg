@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="262px" height="229px" viewBox="0 0 262 229" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>circle4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-7" transform="translate(-246.000000, -195.000000)">
+            <g id="timer" transform="translate(378.500000, 308.500000) rotate(90.000000) translate(-378.500000, -308.500000) translate(174.000000, 104.000000)">
+                <g id="circle4" transform="translate(91.000000, 75.000000)">
+                    <path d="M5.09458535,202.363466 C25.1327678,232.574885 57.3807343,253.984642 94.799468,259.553721 C101.13849,260.497166 107.625909,260.986 114.2275,260.986 M223.573701,58.2081365 C203.507656,27.7600468 171.065618,6.1898653 133.408791,0.658796661" id="Oval-5" stroke="#F6D194" stroke-width="1.133"></path>
+                    <circle id="Oval-9" fill="#F6D194" cx="224.172171" cy="59.0067586" r="4.532"></circle>
+                    <circle id="Oval-9" fill="#F6D194" cx="4.66282433" cy="200.79225" r="4.532"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
