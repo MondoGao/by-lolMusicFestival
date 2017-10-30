@@ -25,7 +25,7 @@ export const checkStatus = (response) => {
 };
 
 export function getjssdkConfig(url) {
-  return fetch(`/service/resources/signature?url=${encodeURIComponent(url)}`)
+  return fetch(`/service/resources/signature?url=${url}`)
     .then(checkStatus)
     .then(data => data.json());
 }
@@ -68,7 +68,7 @@ export function configWechat() {
         debug: false,
         appId,
         timestamp: data.timestamp,
-        nonceStr: data.noncestr,
+        nonceStr: data.nonce_str,
         signature: data.signature,
         jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareQZone'],
       });
