@@ -12,16 +12,22 @@ initLoad();
 quizer.init();
 
 $(() => {
+  const $share = $('#share')
+
   $('#btnStart').on('click', () => {
     switchNextPage('home', 'load');
     quizer.load('quiz');
   });
 
   $('#btnShare').on('click', () => {
-    alert('点击右上角分享本网页哦~');
+    $share.addClass('show');
   });
 
   $('#btnReplay').on('click', () => {
     quizer.replay();
   });
+
+  $share.on('click', () => {
+    $share.removeClass('show');
+  })
 });

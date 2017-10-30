@@ -494,3 +494,27 @@ img {
     }
   }
 }
+
+#share {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 410px 80px 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7) url('./assets/shareBoard.svg') no-repeat center top / 653px 609px;
+  text-align: center;
+  font-size: 36px;
+  letter-spacing: 5px;
+  line-height: 72px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .5s;
+
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
