@@ -25,7 +25,7 @@ export const checkStatus = (response) => {
 };
 
 export function getjssdkConfig(url) {
-  return fetch(`/service/resources/signature?url=${url}`)
+  return fetch(`/service/resources/signature?url=${encodeURIComponent(url)}`)
     .then(checkStatus)
     .then(data => data.json());
 }
@@ -62,7 +62,7 @@ export function reconfigWechat({ link, title, imgUrl, desc, label }) {
 }
 
 export function configWechat() {
-  getjssdkConfig(window.location.href)
+  getjssdkConfig(window.location.href.split('#')[0])
     .then((data) => {
       wx.config({
         debug: false,
@@ -75,10 +75,10 @@ export function configWechat() {
 
       wx.ready(() => {
         reconfigWechat({
-          link: window.location.href,
+          link: window.location.href.split('#')[0],
           title: '英雄联盟音乐排位赛',
           imgUrl: imgIcon,
-          desc: '我打败了喵喵喵喵喵喵喵喵喵',
+          desc: '最强王者的你，也不过是音乐排位赛的菜鸡！',
           label: '',
         });
       });
