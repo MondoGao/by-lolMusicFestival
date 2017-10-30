@@ -18,6 +18,7 @@ a {
   box-sizing: border-box;
   background-repeat: no-repeat;
   letter-spacing: 2px;
+  user-select: none;
 }
 
 h1,
@@ -37,6 +38,11 @@ a:visited {
   text-decoration: none;
   outline: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+.btn {
+  cursor: pointer;
+  user-select: none;
 }
 
 .btn a {
@@ -251,9 +257,17 @@ img {
 
 /* Home */
 #home {
-  padding-top: 686px;
   text-align: center;
-  background-image: url(./assets/homeBottomHl.png), url(./assets/homeBackground.png);
+
+  & .backgroundWrapper {
+    padding-top: 686px;
+    width: 100%;
+    height: 1334px;
+    background-color: var(--mainBackgroundColor);
+    background-image: url(./assets/homeBottomHl.png), url(./assets/homeBackground.png);
+    background-size: cover;
+    background-position: top center;
+  }
 
   & .logoWrapper {
     position: absolute;

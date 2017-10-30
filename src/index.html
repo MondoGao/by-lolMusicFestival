@@ -24,23 +24,25 @@
           </div>
           <img class="loadingLogo" src="<%= require('./assets/loadingLogo.png') %>" alt=""/>
         </div>
-        <h4>音乐排位赛正在匹配中</h4>
+        <h4 id="loadingTip">加载中</h4>
         <div class="loadingWrapper">
           <span id="loadingStrip"></span>
         </div>
       </div>
       <div id="home" class="page">
-        <div class="logoWrapper">
-          <img class="logo" src="<%= require('./assets/homeLogo.png') %>" alt="Logo">
-          <img class="logoHl" src="<%= require('./assets/homeLogoHl.png') %>" alt="LogoHightlight">
+        <div class="backgroundWrapper">
+          <div class="logoWrapper">
+            <img class="logo" src="<%= require('./assets/homeLogo.png') %>" alt="Logo">
+            <img class="logoHl" src="<%= require('./assets/homeLogoHl.png') %>" alt="LogoHightlight">
+          </div>
+          <img class="title" src="<%= require('./assets/homeTitle.png') %>" alt="Title">
+          <span id="btnStart" class="btn start">开始答题</span>
         </div>
-        <img class="title" src="<%= require('./assets/homeTitle.png') %>" alt="Title">
-        <span id="btnStart" class="start">开始答题</span>
       </div>
       <div id="quiz" class="page">
         <div class="levelWrapper">
           <span class="level">
-            当前段位：<span id="shortRank">青铜</span>
+            当前段位-<span id="shortRank">青铜</span>
           </span>
         </div>
         <div id="timerWrapper" class="timerWrapper">
