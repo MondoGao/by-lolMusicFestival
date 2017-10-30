@@ -633,6 +633,50 @@ a:visited {
   to {
     opacity: 1;
   }
+}
+
+@-webkit-keyframes slideDownUp {
+  from {
+    -webkit-transform: translateY(-40%);
+    transform: translateY(-40%);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: translateY(40%);
+    transform: translateY(40%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideDownUp {
+  from {
+    -webkit-transform: translateY(-40%);
+    transform: translateY(-40%);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: translateY(40%);
+    transform: translateY(40%);
+    opacity: 0;
+  }
 }html,
 body {
   position: relative;
@@ -801,14 +845,14 @@ img {
 
 #home .backgroundWrapper {
   position: relative;
-  margin-top: -0.533333rem;
+  margin-top: -1.6rem;
   padding-top: 9.146667rem;
   width: 100%;
   height: 17.786667rem;
   background-color: #000;
-  background-image: url(/lol/assets/homeBottomHl.png?2cf2408), url(/lol/assets/homeBackground.png?edc92f2);
-  background-size: cover;
-  background-position: top center;
+  background-image: url(/lol/assets/commercialLogo.png?5f1211d), url(/lol/assets/homeBottomHl.png?2cf2408), url(/lol/assets/homeBackground.png?edc92f2);
+  background-size: 6.853333rem 0.866667rem, cover, cover;
+  background-position: center 96%, top center, top center;
 }
 
 #home .logoWrapper {
@@ -852,7 +896,7 @@ img {
 /* Quiz */
 
 #quiz {
-  padding: 0.533333rem 0 0.266667rem;
+  padding-top: 0.533333rem;
   background-image: url(/lol/assets/quizBg.png?2efcfeb);
 }
 
@@ -894,6 +938,13 @@ img {
   animation-play-state: paused;
 }
 
+#quiz .timerWrapper.update .timer {
+  background: url(/lol/assets/update.svg?b9b1e1f) no-repeat center / 1.506667rem 1.706667rem;
+  -webkit-animation: slideDownUp 0.5s reverse forwards ease-out;
+  animation: slideDownUp 0.5s reverse forwards ease-out;
+  opacity: 0;
+}
+
 #quiz .timer {
   text-align: center;
   height: 5.44rem;
@@ -903,8 +954,8 @@ img {
   font-size: 0.72rem;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #d9b05b;
-  -webkit-transition: background 0.5s, font-size 0.3s;
-  transition: background 0.5s, font-size 0.3s;
+  -webkit-transition: font-size 0.3s, opacity 0.5s;
+  transition: font-size 0.3s, opacity 0.5s;
 }
 
 .hairlines #quiz .timer {
@@ -964,67 +1015,42 @@ img {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -ms-flex-line-pack: justify;
-  align-content: space-between;
   margin: 0.56rem auto 0;
   width: 9.386667rem;
-  height: 6.653333rem;
-}
-
-#quiz .answerContainer.text {
-  height: 4.12rem;
 }
 
 #quiz .answerContainer.text .answerCard {
-  height: 1.853333rem;
+  height: 2.4rem;
 }
 
 #quiz .answerContainer.text .answerCard span {
   display: inline-block;
-  top: 0.586667rem;
+  top: 50%;
   left: 0;
+  padding: 0 0.266667rem;
   width: 100%;
-  font-size: 0.506667rem;
+  font-size: 0.48rem;
   text-align: center;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 #quiz .answerContainer.text .answerCard::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: url(/lol/assets/cardText.svg?56ac8b3) no-repeat center / contain;
+  background-image: url(/lol/assets/cardText.svg?80c5d18);
 }
 
 #quiz .answerContainer.text .answerCard.congratulation::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: url(/lol/assets/cardAnswer.svg?c76348a) no-repeat center / 100%;
-  -webkit-animation: fadeIn 0.3s;
-  animation: fadeIn 0.3s;
+  background-image: url(/lol/assets/cardTextRight.svg?a766474);
 }
 
 #quiz .answerContainer.text .answerCard.wrongAnswer::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: url(/lol/assets/cardSelect.svg?951f00c) no-repeat center / 100%;
-  -webkit-animation: fadeIn 0.3s;
-  animation: fadeIn 0.3s;
+  background-image: url(/lol/assets/cardTextWrong.svg?292a538);
 }
 
 #quiz .answerCard {
   position: relative;
   display: inline-block;
+  margin-bottom: 0.4rem;
   padding: 0.413333rem 0 0.253333rem;
   width: 4.4rem;
   height: 3.12rem;
@@ -1070,7 +1096,7 @@ img {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url(/lol/assets/cardAnswer.svg?c76348a) no-repeat center / contain;
+  background: url(/lol/assets/cardRight.svg?478e770) no-repeat center / contain;
   -webkit-animation: fadeIn 0.3s;
   animation: fadeIn 0.3s;
 }
@@ -1082,7 +1108,7 @@ img {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url(/lol/assets/cardSelect.svg?951f00c) no-repeat center / contain;
+  background: url(/lol/assets/cardWrong.svg?c6619e4) no-repeat center / contain;
   -webkit-animation: fadeIn 0.3s;
   animation: fadeIn 0.3s;
 }
@@ -1094,10 +1120,10 @@ img {
 }
 
 #result .medalContainer {
-  padding-top: 2.013333rem;
-  height: 6.813333rem;
+  padding-top: 0.68rem;
+  height: 5.48rem;
   text-align: center;
-  background: url(/lol/assets/medalTray.svg?185d45d) no-repeat center 2.346667rem / 4.653333rem 3.986667rem;
+  background: url(/lol/assets/medalTray.svg?185d45d) no-repeat center 1.013333rem / 4.653333rem 3.986667rem;
 }
 
 #result #medal {
@@ -1148,7 +1174,7 @@ img {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-top: 1.053333rem;
+  margin-top: 0.533333rem;
   padding: 0 0.56rem;
 }
 
@@ -1172,4 +1198,29 @@ img {
 #result .btn.btnLarge {
   width: 8.88rem;
   background-image: url(/lol/assets/btnLarge.svg?6e6d358);
+}
+
+#share {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 5.466667rem 1.066667rem 0;
+  color: #fff;
+  background: rgba(0, 0, 0, .7) url(/lol/assets/shareBoard.svg?d8c51d6) no-repeat center top / 8.706667rem 8.12rem;
+  text-align: center;
+  font-size: 0.48rem;
+  letter-spacing: 0.066667rem;
+  line-height: 0.96rem;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+#share.show {
+  opacity: 1;
+  pointer-events: auto;
 }
