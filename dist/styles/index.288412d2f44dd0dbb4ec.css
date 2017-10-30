@@ -513,6 +513,10 @@ a {
   box-sizing: border-box;
   background-repeat: no-repeat;
   letter-spacing: 0.026667rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 h1,
@@ -534,6 +538,14 @@ a:visited {
   -webkit-tap-highlight-color: transparent;
 }
 
+.btn {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .btn a {
   display: inline-block;
   height: 100%;
@@ -542,24 +554,16 @@ a:visited {
 
 .hide {
   display: none;
-}
-
-@font-face {
+}@font-face {
   font-family: "MFBanHei";
   src: url(/lol/fonts/MFBanHei.eot?8c7730d);
-  /* IE9 */
-  src: url(/lol/fonts/MFBanHei.eot?8c7730d?#iefix) format("embedded-opentype"), 
-
-  url(/lol/fonts/MFBanHei.woff?bf68b57) format("woff"), 
-  url(/lol/fonts/MFBanHei.ttf?7c4d784) format("truetype"), 
-
-  url(/lol/assets/_/fonts/MFBanHei.svg?0652b2c#MFBanHei) format("svg");
-  /* iOS 4.1- */
+  src: url(/lol/fonts/MFBanHei.eot?8c7730d?#iefix) format("embedded-opentype"),
+    url(/lol/fonts/MFBanHei.woff?bf68b57) format("woff"),
+    url(/lol/fonts/MFBanHei.ttf?7c4d784) format("truetype"),
+    url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciLz4=#MFBanHei) format("svg");
   font-style: normal;
   font-weight: normal;
-}
-
-@-webkit-keyframes spin {
+}@-webkit-keyframes spin {
   from {
     -webkit-transform: rotate(0);
     transform: rotate(0);
@@ -629,12 +633,12 @@ a:visited {
   to {
     opacity: 1;
   }
-}
-
-html,
+}html,
 body {
+  position: relative;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -645,7 +649,6 @@ body {
   transform-style: preserve-3d;
   -webkit-perspective: 6.666667rem;
   perspective: 6.666667rem;
-  overflow: hidden;
 }
 
 img {
@@ -680,6 +683,61 @@ img {
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
 }
+
+.circleWrapper {
+  position: absolute;
+}
+
+.circleWrapper .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  background-position: center;
+  -webkit-animation: spin infinite linear;
+  animation: spin infinite linear;
+}
+
+.circleWrapper .circle1 {
+  width: 100%;
+  background-image: url(/lol/assets/circle1.svg?70773cb);
+  background-size: 100%;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+}
+
+.circleWrapper .circle2 {
+  background-size: 77.9%;
+  background-image: url(/lol/assets/circle2.svg?a66939c);
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+}
+
+.circleWrapper .circle3 {
+  background-size: 66.7%;
+  background-image: url(/lol/assets/circle3.svg?d1592db);
+  -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+}
+
+.circleWrapper .circle4 {
+  background-size: 63.7%;
+  background-image: url(/lol/assets/circle4.svg?2a262c8);
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+}
+
+.circleWrapper .circle5 {
+  background-position: 77% 88%;
+  background-size: 18.55288%;
+  background-image: url(/lol/assets/circle5.svg?d03d302);
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+}
+
+/* Load */
 
 #load {
   padding-top: 18%;
@@ -730,67 +788,27 @@ img {
 }
 
 #load .circleWrapper {
-  position: absolute;
   left: 1.406667rem;
   width: 7.186667rem;
   height: 7.186667rem;
 }
 
-#load .circleWrapper .circle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  background-position: center;
-  -webkit-animation: spin infinite linear;
-  animation: spin infinite linear;
-}
-
-#load .circleWrapper .circle1 {
-  width: 100%;
-  background-image: url(/lol/assets/circle1.svg?ff006b4);
-  background-size: 100%;
-  -webkit-animation-duration: 10s;
-  animation-duration: 10s;
-}
-
-#load .circleWrapper .circle2 {
-  background-size: 77.9%;
-  background-image: url(/lol/assets/circle2.svg?6555d0e);
-  -webkit-animation-duration: 6s;
-  animation-duration: 6s;
-}
-
-#load .circleWrapper .circle3 {
-  background-size: 66.7%;
-  background-image: url(/lol/assets/circle3.svg?eb682a1);
-  -webkit-animation-duration: 8s;
-  animation-duration: 8s;
-}
-
-#load .circleWrapper .circle4 {
-  background-size: 63.7%;
-  background-image: url(/lol/assets/circle4.svg?8b26d89);
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
-}
-
-#load .circleWrapper .circle5 {
-  background-position: 77% 88%;
-  background-size: 18.55288%;
-  background-image: url(/lol/assets/circle5.svg?463aba1);
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
-}
-
 /* Home */
 
 #home {
-  padding-top: 9.146667rem;
   text-align: center;
-  background-image: url(/lol/assets/homeBottomHl.png?f2cdb33), url(/lol/assets/homeBackground.png?fc5f0f3);
+}
+
+#home .backgroundWrapper {
+  position: relative;
+  margin-top: -0.533333rem;
+  padding-top: 9.146667rem;
+  width: 100%;
+  height: 17.786667rem;
+  background-color: #000;
+  background-image: url(/lol/assets/homeBottomHl.png?ee80596), url(/lol/assets/homeBackground.png?6a0129a);
+  background-size: cover;
+  background-position: top center;
 }
 
 #home .logoWrapper {
@@ -825,7 +843,7 @@ img {
   padding-top: 0.373333rem;
   width: 4.146667rem;
   height: 1.213333rem;
-  background: url(/lol/assets/homeBtn.svg?c1b86a8) no-repeat center/contain;
+  background: url(/lol/assets/homeBtn.svg?ca84376) no-repeat center/contain;
   font-size: 0.48rem;
   color: #1e1510;
   letter-spacing: 0.066667rem;
@@ -834,8 +852,8 @@ img {
 /* Quiz */
 
 #quiz {
-  padding-top: 0.533333rem;
-  background-image: url(/lol/assets/quizBg.png?e588ad3);
+  padding: 0.533333rem 0 0.266667rem;
+  background-image: url(/lol/assets/quizBg.png?525529d);
 }
 
 #quiz .levelWrapper {
@@ -856,7 +874,7 @@ img {
   line-height: 0.64rem;
   font-size: 0.32rem;
   letter-spacing: 0.0444rem;
-  background: url(/lol/assets/label.svg?95ad4ae) center / contain;
+  background: url(/lol/assets/label.svg?8d77018) center / contain;
 }
 
 #quiz .timerWrapper {
@@ -867,7 +885,7 @@ img {
 }
 
 #quiz .timerWrapper.paused .timer {
-  background: url(/lol/assets/play.svg?83c8d72) no-repeat center / 1.733333rem 1.733333rem;
+  background: url(/lol/assets/play.svg?e42dde1) no-repeat center / 1.733333rem 1.733333rem;
   font-size: 0;
 }
 
@@ -880,7 +898,7 @@ img {
   text-align: center;
   height: 5.44rem;
   line-height: 5.44rem;
-  background: url(/lol/assets/timer.svg?fd890bf) no-repeat center / 2.306667rem 2.386667rem;
+  background: url(/lol/assets/timer.svg?e844071) no-repeat center / 2.306667rem 2.386667rem;
   color: #020002;
   font-size: 0.72rem;
   -webkit-text-stroke-width: 1px;
@@ -899,55 +917,6 @@ img {
   height: 100%;
 }
 
-#quiz .circleWrapper .circle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  background-position: center;
-  -webkit-animation: spin infinite linear;
-  animation: spin infinite linear;
-}
-
-#quiz .circleWrapper .circle1 {
-  width: 100%;
-  background-image: url(/lol/assets/circle1.svg?ff006b4);
-  background-size: 100%;
-  -webkit-animation-duration: 10s;
-  animation-duration: 10s;
-}
-
-#quiz .circleWrapper .circle2 {
-  background-size: 77.9%;
-  background-image: url(/lol/assets/circle2.svg?6555d0e);
-  -webkit-animation-duration: 6s;
-  animation-duration: 6s;
-}
-
-#quiz .circleWrapper .circle3 {
-  background-size: 66.7%;
-  background-image: url(/lol/assets/circle3.svg?eb682a1);
-  -webkit-animation-duration: 8s;
-  animation-duration: 8s;
-}
-
-#quiz .circleWrapper .circle4 {
-  background-size: 63.7%;
-  background-image: url(/lol/assets/circle4.svg?8b26d89);
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
-}
-
-#quiz .circleWrapper .circle5 {
-  background-position: 77% 88%;
-  background-size: 24.5098%;
-  background-image: url(/lol/assets/circle5.svg?463aba1);
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
-}
-
 #quiz .quizCount {
   margin: 0.48rem 0 0.266667rem;
   text-align: center;
@@ -962,7 +931,7 @@ img {
   margin-right: 0.133333rem;
   width: 3.92rem;
   height: 0.386667rem;
-  background: url(/lol/assets/decorator.svg?bdef84b) no-repeat center / contain;
+  background: url(/lol/assets/decorator.svg?4b17eb2) no-repeat center / contain;
 }
 
 #quiz .quizCount::after {
@@ -1026,18 +995,17 @@ img {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url(/lol/assets/cardText.svg?6a1b8a1) no-repeat center / contain;
+  background: url(/lol/assets/cardText.svg?56ac8b3) no-repeat center / contain;
 }
 
-#quiz .answerContainer.text .answerCard.congratulation::after,
-#quiz .answerContainer.text .answerCard.rightAnswer::after {
+#quiz .answerContainer.text .answerCard.congratulation::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: url(/lol/assets/cardAnswer.svg?c140b84) no-repeat center / 100%;
+  background: url(/lol/assets/cardAnswer.svg?c76348a) no-repeat center / 100%;
   -webkit-animation: fadeIn 0.3s;
   animation: fadeIn 0.3s;
 }
@@ -1049,7 +1017,7 @@ img {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url(/lol/assets/cardSelect.svg?eef0e52) no-repeat center / 100%;
+  background: url(/lol/assets/cardSelect.svg?951f00c) no-repeat center / 100%;
   -webkit-animation: fadeIn 0.3s;
   animation: fadeIn 0.3s;
 }
@@ -1092,18 +1060,17 @@ img {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url(/lol/assets/card.svg?a3883ac) no-repeat center / contain;
+  background: url(/lol/assets/card.svg?449de47) no-repeat center / contain;
 }
 
-#quiz .answerCard.congratulation::after,
-#quiz .answerCard.rightAnswer::after {
+#quiz .answerCard.congratulation::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: url(/lol/assets/cardAnswer.svg?c140b84) no-repeat center / contain;
+  background: url(/lol/assets/cardAnswer.svg?c76348a) no-repeat center / contain;
   -webkit-animation: fadeIn 0.3s;
   animation: fadeIn 0.3s;
 }
@@ -1115,7 +1082,7 @@ img {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url(/lol/assets/cardSelect.svg?eef0e52) no-repeat center / contain;
+  background: url(/lol/assets/cardSelect.svg?951f00c) no-repeat center / contain;
   -webkit-animation: fadeIn 0.3s;
   animation: fadeIn 0.3s;
 }
@@ -1123,14 +1090,14 @@ img {
 /* Result */
 
 #result {
-  background-image: url(/lol/assets/resultBg.png?05db26a);
+  background-image: url(/lol/assets/resultBg.png?e8f5b77);
 }
 
 #result .medalContainer {
   padding-top: 2.013333rem;
   height: 6.813333rem;
   text-align: center;
-  background: url(/lol/assets/medalTray.svg?71fa916) no-repeat center 2.346667rem / 4.653333rem 3.986667rem;
+  background: url(/lol/assets/medalTray.svg?185d45d) no-repeat center 2.346667rem / 4.653333rem 3.986667rem;
 }
 
 #result #medal {
@@ -1145,7 +1112,7 @@ img {
   padding: 0.666667rem 1.093333rem 0.266667rem;
   width: 9.306667rem;
   height: 5.733333rem;
-  background: url(/lol/assets/board.svg?172e470) no-repeat center / contain;
+  background: url(/lol/assets/board.svg?fb7d9ba) no-repeat center / contain;
   color: #fbedd7;
   text-align: center;
   font-size: 0.426667rem;
@@ -1197,12 +1164,12 @@ img {
   text-align: center;
   font-size: 0.48rem;
   color: #1e1510;
-  background: url(/lol/assets/btn.svg?bf487fe) no-repeat center / contain;
+  background: url(/lol/assets/btn.svg?c380c50) no-repeat center / contain;
   white-space: nowrap;
   letter-spacing: 0.066667rem;
 }
 
 #result .btn.btnLarge {
   width: 8.88rem;
-  background-image: url(/lol/assets/btnLarge.svg?8ea68a8);
+  background-image: url(/lol/assets/btnLarge.svg?6e6d358);
 }
