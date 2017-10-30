@@ -1,6 +1,6 @@
 const ranksData = {
   bronze: {
-    name: '英勇黄铜',
+    name: '英勇青铜',
     praise: '你好，我爱你，谢谢，辛苦了', 
   },
   silver: {
@@ -36,22 +36,18 @@ export function getRankName(score) {
     case 0:
       return 'bronze';
     case 1:
-    case 2:
       return 'silver';
-    case 3:
-    case 4:
+    case 2:
       return 'gold';
-    case 5:
-    case 6:
+    case 3:
       return 'platinum';
-    case 7:
-    case 8:
+    case 4:
       return 'diamond';
-    case 9:
+    case 5:
       return 'challenger';
-    case 10:
+    case 6:
       return 'king';
     default:
-      return 'bronze';
+      return 'king';
   }
 }

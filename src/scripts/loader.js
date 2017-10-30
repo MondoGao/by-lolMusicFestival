@@ -45,9 +45,10 @@ export function createLoader(regx, include = true, toPage = 'home') {
         remainTime = 0;
       }
 
-      setTimeout(switchNextPage, remainTime, 'load', toPage);
-
-      resolve();
+      setTimeout(() => {
+        switchNextPage('load', toPage);
+        resolve();
+      }, remainTime);
     });
 
     Object.values(assets).forEach((url) => {
