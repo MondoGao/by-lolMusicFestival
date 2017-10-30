@@ -7,9 +7,13 @@
       <meta content="yes" name="apple-touch-fullscreen">
       <meta content="telephone=no,email=no" name="format-detection">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>英雄联盟音乐节</title>
+      <title>英雄联盟音乐排位赛</title>
       <script charset="utf-8">
         !function(e,t){function n(){t.body?t.body.style.fontSize=12*o+"px":t.addEventListener("DOMContentLoaded",n)}function d(){var e=i.clientWidth/10;i.style.fontSize=e+"px"}var i=t.documentElement,o=e.devicePixelRatio||1;if(n(),d(),e.addEventListener("resize",d),e.addEventListener("pageshow",function(e){e.persisted&&d()}),o>=2){var a=t.createElement("body"),s=t.createElement("div");s.style.border=".5px solid transparent",a.appendChild(s),i.appendChild(a),1===s.offsetHeight&&i.classList.add("hairlines"),i.removeChild(a)}}(window,document);
+      </script>
+      <script charset="utf-8">
+        var _czc = _czc || [];
+        _czc.push(['_setAccount', '1266854243']);
       </script>
     </head>
     <body>
@@ -24,23 +28,25 @@
           </div>
           <img class="loadingLogo" src="<%= require('./assets/loadingLogo.png') %>" alt=""/>
         </div>
-        <h4>音乐排位赛正在匹配中</h4>
+        <h4 id="loadingTip">加载中</h4>
         <div class="loadingWrapper">
           <span id="loadingStrip"></span>
         </div>
       </div>
       <div id="home" class="page">
-        <div class="logoWrapper">
-          <img class="logo" src="<%= require('./assets/homeLogo.png') %>" alt="Logo">
-          <img class="logoHl" src="<%= require('./assets/homeLogoHl.png') %>" alt="LogoHightlight">
+        <div class="backgroundWrapper">
+          <div class="logoWrapper">
+            <img class="logo" src="<%= require('./assets/homeLogo.png') %>" alt="Logo">
+            <img class="logoHl" src="<%= require('./assets/homeLogoHl.png') %>" alt="LogoHightlight">
+          </div>
+          <img class="title" src="<%= require('./assets/homeTitle.png') %>" alt="Title">
+          <span id="btnStart" class="btn start">开始答题</span>
         </div>
-        <img class="title" src="<%= require('./assets/homeTitle.png') %>" alt="Title">
-        <span id="btnStart" class="start">开始答题</span>
       </div>
       <div id="quiz" class="page">
         <div class="levelWrapper">
           <span class="level">
-            当前段位：<span id="shortRank">青铜</span>
+            当前段位-<span id="shortRank">青铜</span>
           </span>
         </div>
         <div id="timerWrapper" class="timerWrapper">
@@ -81,7 +87,10 @@
           <span id="btnJump" class="btn btnLarge"><a href="http://v.qq.com/live/p/topic/40842/preview.html?from=binyan">免费观看英雄联盟音乐节直播</a></span>
         </div>
       </div>
-      <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-      <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js" crossorigin="anonymous"></script>
+      <div style="display: none;">
+        <script src="//s19.cnzz.com/z_stat.php?id=1266854243&web_id=1266854243" language="JavaScript"></script>
+      </div>
+      <script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+      <script src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js" crossorigin="anonymous"></script>
     </body>
   </html>

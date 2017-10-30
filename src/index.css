@@ -1,98 +1,7 @@
-html,
-body,
-div,
-span,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-li,
-a {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-repeat: no-repeat;
-  letter-spacing: 2px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: normal;
-}
-
-a,
-a:hover,
-a:focus,
-a:visited {
-  color: inherit;
-  text-decoration: none;
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.btn a {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-}
-
-.hide {
-  display: none;
-}
-
-@font-face {
-  font-family: "MFBanHei";
-  src: url("./fonts/MFBanHei.eot"); /* IE9 */
-  src: url("./fonts/MFBanHei.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-
-  url("./fonts/MFBanHei.woff") format("woff"), /* chrome、firefox */
-  url("./fonts/MFBanHei.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
-
-  url("./fonts/MFBanHei.svg#MFBanHei") format("svg"); /* iOS 4.1- */
-  font-style: normal;
-  font-weight: normal;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-40%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
+@import '~normalize.css';
+@import './styles/global.css';
+@import './styles/fonts.css';
+@import './styles/animations.css';
 
 :root {
   --mainColor: #f6d194;
@@ -112,8 +21,10 @@ a:visited {
 
 html,
 body {
+  position: relative;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -122,7 +33,6 @@ body {
   font-family: var(--mainFont), BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   transform-style: preserve-3d;
   perspective: 500px;
-  overflow: hidden;
 }
 
 img {
@@ -152,6 +62,54 @@ img {
   }
 }
 
+.circleWrapper {
+  position: absolute;
+
+  & .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background-position: center;
+    animation: spin infinite linear;
+  }
+
+  & .circle1 {
+    width: 100%;
+    background-image: url(./assets/circle1.svg);
+    background-size: 100%;
+    animation-duration: 10s;
+  }
+
+  & .circle2 {
+    background-size: 77.9%;
+    background-image: url(./assets/circle2.svg);
+    animation-duration: 6s;
+  }
+
+  & .circle3 {
+    background-size: 66.7%;
+    background-image: url(./assets/circle3.svg);
+    animation-duration: 8s;
+  }
+
+  & .circle4 {
+    background-size: 63.7%;
+    background-image: url(./assets/circle4.svg);
+    animation-duration: 5s;
+  }
+
+  & .circle5 {
+    background-position: 77% 88%;
+    background-size: calc(100 / var(--circleWrapperWidthLoading) * 100%);
+    background-image: url(./assets/circle5.svg);
+    animation-duration: 4s;
+  }
+}
+
+/* Load */
 #load {
   padding-top: 18%;
   text-align: center;
@@ -198,61 +156,27 @@ img {
   }
 
   & .circleWrapper {
-    position: absolute;
     left: calc((750 - var(--circleWrapperWidthLoading)) / 2)px;
     width: var(--circleWrapperWidthLoading)px;
     height: var(--circleWrapperWidthLoading)px;
-
-    & .circle {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 100%;
-      background-position: center;
-      animation: spin infinite linear;
-    }
-
-    & .circle1 {
-      width: 100%;
-      background-image: url(./assets/circle1.svg);
-      background-size: 100%;
-      animation-duration: 10s;
-    }
-
-    & .circle2 {
-      background-size: 77.9%;
-      background-image: url(./assets/circle2.svg);
-      animation-duration: 6s;
-    }
-
-    & .circle3 {
-      background-size: 66.7%;
-      background-image: url(./assets/circle3.svg);
-      animation-duration: 8s;
-    }
-
-    & .circle4 {
-      background-size: 63.7%;
-      background-image: url(./assets/circle4.svg);
-      animation-duration: 5s;
-    }
-
-    & .circle5 {
-      background-position: 77% 88%;
-      background-size: calc(100 / var(--circleWrapperWidthLoading) * 100%);
-      background-image: url(./assets/circle5.svg);
-      animation-duration: 4s;
-    }
   }
 }
 
 /* Home */
 #home {
-  padding-top: 686px;
   text-align: center;
-  background-image: url(./assets/homeBottomHl.png), url(./assets/homeBackground.png);
+
+  & .backgroundWrapper {
+    position: relative;
+    margin-top: -40px;
+    padding-top: 686px;
+    width: 100%;
+    height: 1334px;
+    background-color: var(--mainBackgroundColor);
+    background-image: url(./assets/homeBottomHl.png), url(./assets/homeBackground.png);
+    background-size: cover;
+    background-position: top center;
+  }
 
   & .logoWrapper {
     position: absolute;
@@ -295,7 +219,7 @@ img {
 
 /* Quiz */
 #quiz {
-  padding-top: 40px;
+  padding: 40px 0 20px;
   background-image: url(./assets/quizBg.png);
 
   & .levelWrapper {
@@ -354,49 +278,6 @@ img {
     position: absolute;
     width: 100%;
     height: 100%;
-
-    & .circle {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 100%;
-      background-position: center;
-      animation: spin infinite linear;
-    }
-
-    & .circle1 {
-      width: 100%;
-      background-image: url(./assets/circle1.svg);
-      background-size: 100%;
-      animation-duration: 10s;
-    }
-
-    & .circle2 {
-      background-size: 77.9%;
-      background-image: url(./assets/circle2.svg);
-      animation-duration: 6s;
-    }
-
-    & .circle3 {
-      background-size: 66.7%;
-      background-image: url(./assets/circle3.svg);
-      animation-duration: 8s;
-    }
-
-    & .circle4 {
-      background-size: 63.7%;
-      background-image: url(./assets/circle4.svg);
-      animation-duration: 5s;
-    }
-
-    & .circle5 {
-      background-position: 77% 88%;
-      background-size: calc(100 / var(--circlrWrapperWidth) * 100%);
-      background-image: url(./assets/circle5.svg);
-      animation-duration: 4s;
-    }
   }
 
   & .quizCount {
@@ -467,8 +348,7 @@ img {
           background: url(./assets/cardText.svg) no-repeat center / contain;
         }
 
-        &.congratulation::after,
-        &.rightAnswer::after {
+        &.congratulation::after {
           content: "";
           position: absolute;
           top: 0;
@@ -527,8 +407,7 @@ img {
       background: url(./assets/card.svg) no-repeat center / contain;
     }
 
-    &.congratulation::after,
-    &.rightAnswer::after {
+    &.congratulation::after {
       content: "";
       position: absolute;
       top: 0;
