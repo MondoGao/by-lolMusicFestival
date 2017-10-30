@@ -6,7 +6,8 @@ import ranksData, { getRankName } from './ranksData';
 import audioController from './audioController';
 import { quizLoad } from './loader';
 
-import { switchNextPage } from './helpers';
+import { switchNextPage, reconfigWechat } from './helpers';
+import imgIcon from '../assets/icon.png';
 
 const optionResolveContext = require.context('../assets/quiz', true, /\.(jpg|mp3)$/);
 const rankResolveContext = require.context('../assets/ranks', false, /\.svg$/);
@@ -165,6 +166,14 @@ const quizer = {
     });
 
     this.$medal.attr('src', rankResolveContext(`./${rankEngName}.svg`));
+
+    reconfigWechat({
+      link: window.location.href.split('#')[0],
+      title: '英雄联盟音乐排位赛',
+      imgUrl: imgIcon,
+      desc: rank.shareDesc,
+      label: '',
+    });
 
     $('#praise').text(rank.praise);
   },
