@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "MFBanHei";
+  src: url("../fonts/MFBanHei.eot");
+  src:
+    url("../fonts/MFBanHei.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MFBanHei.woff") format("woff"),
+    url("../fonts/MFBanHei.ttf") format("truetype"),
+    url("../fonts/MFBanHei.svg#MFBanHei") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
