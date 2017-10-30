@@ -43,14 +43,9 @@
   70% {
     opacity: 1;
   }
-  
-  99% {
-    background-image: url(../assets/update.svg);
-  }
 
   to {
     transform: translateY(40%);
     opacity: 0;
-    background-image: url(../assets/timer.svg);
   }
 }

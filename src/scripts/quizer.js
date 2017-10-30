@@ -44,7 +44,6 @@ const quizer = {
     this.MAX_FAIL = 999;
 
     this.resetQuizSet();
-    console.log(this.currentSet);
 
     this.isLocked = false;
 

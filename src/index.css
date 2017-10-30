@@ -278,7 +278,7 @@ img {
     font-size: 54px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #d9b05b;
-    transition: background 0.5s, font-size 0.3s, opacity 0.5s;
+    transition: font-size 0.3s, opacity 0.5s;
   }
 
   & .circleWrapper {
@@ -422,10 +422,10 @@ img {
   background-image: url(./assets/resultBg.png);
 
   & .medalContainer {
-    padding-top: 151px;
-    height: 511px;
+    padding-top: 51px;
+    height: 411px;
     text-align: center;
-    background: url(./assets/medalTray.svg) no-repeat center 176px / 349px 299px;
+    background: url(./assets/medalTray.svg) no-repeat center 76px / 349px 299px;
   }
 
   & #medal {
@@ -470,7 +470,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 79px;
+    margin-top: 40px;
     padding: 0 42px;
   }
 
