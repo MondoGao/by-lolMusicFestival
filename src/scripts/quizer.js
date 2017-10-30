@@ -1,9 +1,10 @@
 import $ from 'zepto';
 
 import { publicPath } from '../../settings';
-import quizData from './quizData';
+import { quizSetData, quizData } from './quizData';
 import ranksData, { getRankName } from './ranksData';
 import audioController from './audioController';
+import { quizLoad } from './loader';
 
 import { switchNextPage } from './helpers';
 
@@ -11,13 +12,40 @@ const optionResolveContext = require.context('../assets/quiz', true, /\.(jpg|mp3
 const rankResolveContext = require.context('../assets/ranks', false, /\.svg$/);
 
 const quizer = {
+  /**
+   * Select quiz set, prefer 'REC'
+   */
+  resetQuizSet() {
+    const isRec = Math.random() <= 0.3;
+
+    if (isRec) {
+      this.currentSet = 'REC';
+    } else {
+      const sets = Object.keys(quizSetData).filter(setName => setName !== 'REC');
+
+      this.currentSet = sets[Math.floor((Math.random() * 0.999) * sets.length)];
+    }
+
+    this.current = 0;
+    this.total = this.getSetData().length;
+    this.score = 0;
+    this.fail = 0;
+  },
+  /**
+   * Return quiz arr
+   */
+  getSetData() {
+    return quizSetData[this.currentSet];
+  },
+  getCurrentQuiz() {
+    return quizData.find(({ id }) => id === this.getSetData()[this.current]);
+  },
   init() {
     this.MAX_FAIL = 999;
 
-    this.current = 0;
-    this.total = quizData.length;
-    this.score = 0;
-    this.fail = 0;
+    this.resetQuizSet();
+    console.log(this.currentSet);
+
     this.isLocked = false;
 
     this.beatPlayerNum = 0;
@@ -50,7 +78,7 @@ const quizer = {
 
     audioController.pause();
 
-    const { answerIndex } = quizData[this.current];
+    const { answerIndex } = this.getCurrentQuiz();
     const isRight = optionIndex === answerIndex;
 
     const cards = this.$quizAnwsers.children();
@@ -84,12 +112,6 @@ const quizer = {
       }),
     })
       .then(data => data.json())
-    // .then(() => ({
-    // data: {
-    // beat_player_number: 50,
-    // sum_player_number: 200,
-    // }
-    // }))
       .then(({ data }) => {
         this.beatPlayerNum = data.beat_player_number;
         this.totalPlayerNum = data.sum_player_number;
@@ -114,12 +136,12 @@ const quizer = {
       audioController.isLocked = false;
     }
   },
-  createAnswerCard(quizIndex, optionIndex, desc, hasImage = true) {
+  createAnswerCard({ id, hasImage }, optionIndex, optionDesc) {
     const card = $(`
       <li class="answerCard">
         ${hasImage ?
-            `<img src="${optionResolveContext(`./${quizIndex + 1}/${optionIndex + 1}.jpg`)}" alt=""/>` : ''}
-        <span>${desc}</span>
+            `<img src="${optionResolveContext(`./${id}/${optionIndex + 1}.jpg`)}" alt=""/>` : ''}
+        <span>${optionDesc}</span>
       </li>
     `);
 
@@ -145,14 +167,18 @@ const quizer = {
   },
   replay() {
     this.init();
-    switchNextPage('result', 'quiz');
-    audioController.play();
+    switchNextPage('result', 'load');
+    this.load('quiz');
+  },
+  load(toPage = '') {
+    return quizLoad(this.getSetData(), toPage)
+      .then(() => audioController.play());
   },
   sync() {
     if (!this.isEnded()) {
-      const quiz = quizData[this.current];
+      const quiz = this.getCurrentQuiz();
       const cards = quiz.options
-        .map((option, index) => this.createAnswerCard(this.current, index, option, quiz.hasImage));
+        .map((option, index) => this.createAnswerCard(quiz, index, option));
 
       this.$quizAnwsers.empty();
       if (!quiz.hasImage) {
@@ -168,7 +194,7 @@ const quizer = {
       this.$quizQuestion.text(quiz.desc);
       this.$currentNum.text(this.current + 1);
 
-      audioController.switchAudio(optionResolveContext(`./${this.current + 1}/audio.mp3`));
+      audioController.switchAudio(optionResolveContext(`./${quiz.id}/audio.mp3`));
 
       if (this.current !== 0) {
         audioController.play();

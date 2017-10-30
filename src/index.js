@@ -2,21 +2,19 @@ import $ from 'zepto';
 
 import './index.css';
 
-import { initLoad, quizLoad } from './scripts/loader';
+import { initLoad } from './scripts/loader';
 
 import audioController from './scripts/audioController';
 import quizer from './scripts/quizer';
 import { switchNextPage } from './scripts/helpers';
 
 initLoad();
+quizer.init();
 
 $(() => {
   $('#btnStart').on('click', () => {
     switchNextPage('home', 'load');
-    quizLoad([1, 2])
-      .then(() => {
-        audioController.play();
-      });
+    quizer.load('quiz');
   });
 
   $('#btnShare').on('click', () => {
@@ -26,6 +24,4 @@ $(() => {
   $('#btnReplay').on('click', () => {
     quizer.replay();
   });
-
-  quizer.init();
 });

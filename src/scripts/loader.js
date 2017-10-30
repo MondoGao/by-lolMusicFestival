@@ -47,7 +47,8 @@ export function createLoader(regx, include = true, toPage = 'home') {
 
       setTimeout(() => {
         switchNextPage('load', toPage);
-        resolve();
+
+        setTimeout(resolve, 500);
       }, remainTime);
     });
 
@@ -61,17 +62,15 @@ export function createLoader(regx, include = true, toPage = 'home') {
   });
 }
 
-export function quizLoad(quizIds = []) {
+export function quizLoad(quizIds = [], toPage = '') {
   $loadingTip.text('音乐排位赛正在匹配中');
 
   const regStr = `quiz/(${quizIds.join('|')})/`;
 
-  return createLoader(new RegExp(regStr), true, 'quiz');
+  return createLoader(new RegExp(regStr), true, toPage);
 }
 
 export function initLoad() {
-  $loadingTip.text('加载中');
-
   if (isFirstLoad()) {
     return loadAssetsList()
       .then(() => {
