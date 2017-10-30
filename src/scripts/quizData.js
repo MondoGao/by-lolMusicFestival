@@ -136,7 +136,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 4,
+    answerIndex: 3,
     options: [
       '坚持不放弃我们就是赢家',
       '秒退的我也想骂',
@@ -148,7 +148,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 4,
+    answerIndex: 3,
     options: [
       'yeah',
       '~yeah ~oh',
@@ -160,7 +160,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '去逛街鸟',
       '洒下激动热泪',
@@ -172,7 +172,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '广大撸友',
       '广大基友',
@@ -184,7 +184,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '萧敬腾',
       '雷神托尔',
@@ -196,7 +196,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       'PG ONE',
       '毁灭博士',
@@ -208,7 +208,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       'Allan ',
       'Alan Walker',
@@ -220,7 +220,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '探险家伊泽瑞尔',
       'Alan Walker',
@@ -232,7 +232,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       'Alan Walker',
       '卫宫士郎',
@@ -244,7 +244,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '李云迪',
       '王力宏',
@@ -256,7 +256,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '郎朗',
       '李云迪',
@@ -268,7 +268,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '拳头公司',
       '小拳拳锤你胸口',
@@ -280,7 +280,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 4,
+    answerIndex: 3,
     options: [
       '请开始你的表演',
       '皮皮虾我们走',
@@ -292,7 +292,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '初音未来',
       '洛天依',
@@ -304,7 +304,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '渡边麻友',
       '柏木由纪',
@@ -316,7 +316,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       'PDD',
       'MISS',
@@ -328,7 +328,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '上海彩虹室内合唱团',
       '北京彩虹室内合唱团',
@@ -340,7 +340,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '尚雯婕',
       '奇迹觉醒',
@@ -352,7 +352,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '我是传奇',
       'Legends Never Die',
@@ -364,7 +364,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       'Ignite',
       '熵',
@@ -376,7 +376,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       'Worlds Collide',
       '飞龙在天',
@@ -388,7 +388,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '猩球崛起',
       'Warriors',
@@ -400,7 +400,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       "Summoner's Call",
       '今晚吃鸡',
@@ -412,7 +412,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '徐梦圆',
       '双笙',
@@ -424,7 +424,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       'sky',
       '李晓峰',
@@ -436,7 +436,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '山隐之焰奥恩',
       '德玛西亚之翼',
@@ -448,7 +448,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 3,
+    answerIndex: 2,
     options: [
       '源计划联合艾希',
       '冰霜女巫',
@@ -460,7 +460,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 3,
+    answerIndex: 2,
     options: [
       '山隐之焰奥恩',
       '诺克萨斯之手德莱厄斯',
@@ -472,7 +472,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '山隐之焰奥恩',
       '符文法师瑞兹',
@@ -484,7 +484,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 3,
+    answerIndex: 2,
     options: [
       '山隐之焰奥恩',
       '符文法师瑞兹',
@@ -496,7 +496,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 4,
+    answerIndex: 3,
     options: [
       '诺克萨斯之手德莱厄斯',
       '符文法师瑞兹',
@@ -508,7 +508,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '海兽祭司俄洛伊',
       '源计划联合艾希',
@@ -520,7 +520,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '探险家伊泽瑞尔',
       '符文法师瑞兹',
@@ -532,7 +532,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '源计划林易',
       '唤潮鲛姬娜美',
@@ -544,7 +544,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '德玛西亚之翼奎因',
       '符文法师瑞兹',
@@ -556,7 +556,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '德玛西亚之翼奎因',
       '皮城执法官蔚',
@@ -568,7 +568,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '九尾妖狐阿狸',
       '德玛西亚之翼',
@@ -580,7 +580,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '符文法师瑞兹',
       '弗雷尔卓德之心布隆',
@@ -592,7 +592,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 4,
+    answerIndex: 3,
     options: [
       '符文法师瑞兹',
       '冰霜女巫',
@@ -604,7 +604,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '星之守护者厄运小姐',
       '冰霜女巫',
@@ -616,7 +616,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '星之守护者厄运小姐',
       '赏金猎人厄运小姐',
@@ -628,7 +628,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '大元素使拉克丝',
       '灵魂守卫乌迪尔',
@@ -640,7 +640,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '大元素使拉克丝',
       '神龙烈焰金克丝',
@@ -652,7 +652,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '丧尸杀手金克丝',
       '神龙烈焰金克丝',
@@ -664,7 +664,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '丧尸杀手金克丝',
       '霸天零式赛恩',
@@ -676,7 +676,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '圣锤之毅波比',
       '霸天零式赛恩',
@@ -688,7 +688,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '圣锤之毅波比',
       '圣枪游侠卢锡安',
@@ -700,7 +700,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '电玩勇者锐雯',
       '圣枪游侠卢锡安',
@@ -712,7 +712,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '电玩勇者锐雯',
       '银河魔装机神兰博',
@@ -724,7 +724,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '电玩勇者锐雯',
       '沙漠皇帝阿兹尔',
@@ -736,7 +736,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '未来战士凯特琳',
       '圣枪游侠卢锡安',
@@ -748,7 +748,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       'DJ娑娜',
       '圣枪游侠卢锡安',
@@ -760,7 +760,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 4,
+    answerIndex: 3,
     options: [
       'DJ娑娜',
       '圣枪游侠卢锡安',
@@ -772,7 +772,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 4,
+    answerIndex: 3,
     options: [
       '霸天零式赛恩',
       '圣枪游侠卢锡安',
@@ -784,7 +784,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '殇之木乃伊阿木木',
       '神龙烈焰金克丝',
@@ -796,7 +796,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '岩雀塔莉垭',
       '海洋之灾普朗克',
@@ -808,7 +808,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '岩雀塔莉垭',
       '冰霜女巫丽桑卓',
@@ -820,7 +820,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 4,
+    answerIndex: 3,
     options: [
       '大元素使拉克丝',
       '神龙烈焰金克丝',
@@ -832,7 +832,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '大元素使拉克丝',
       '美猴王孙悟空',
@@ -844,7 +844,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 3,
+    answerIndex: 2,
     options: [
       '大元素使拉克丝',
       '美猴王孙悟空',
@@ -856,7 +856,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 4,
+    answerIndex: 3,
     options: [
       '大元素使拉克丝',
       '美猴王孙悟空',
@@ -868,7 +868,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '荣耀行刑官德莱文',
       '圣枪游侠卢锡安',
@@ -880,7 +880,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 3,
+    answerIndex: 2,
     options: [
       '圣枪游侠卢锡安',
       '霸天零式赛恩',
@@ -892,7 +892,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 2,
+    answerIndex: 1,
     options: [
       '圣枪游侠卢锡安',
       '永猎双子千珏',
@@ -904,7 +904,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '邪恶小法师维迦',
       '霸天零式赛恩',
@@ -916,7 +916,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 4,
+    answerIndex: 3,
     options: [
       '电玩勇者锐雯',
       '沙漠皇帝阿兹尔',
@@ -928,7 +928,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 3,
+    answerIndex: 2,
     options: [
       '冰霜女巫',
       '唤潮鲛姬',
@@ -940,7 +940,7 @@ export const quizData = [
   },
   {
     hasImage: false,
-    answerIndex: 1,
+    answerIndex: 0,
     options: [
       '时间刺客艾克',
       '德玛西亚之翼奎因',
