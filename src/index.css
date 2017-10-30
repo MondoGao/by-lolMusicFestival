@@ -260,6 +260,13 @@ img {
       }
     }
 
+    &.update {
+      & .timer {
+        background: url(./assets/update.svg) no-repeat center / 113px 128px;
+        animation: slideDownUp 0.5s reverse forwards ease-out;
+        opacity: 0;
+      }
+    }
   }
 
   & .timer {
@@ -271,7 +278,7 @@ img {
     font-size: 54px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #d9b05b;
-    transition: background 0.5s, font-size 0.3s;
+    transition: background 0.5s, font-size 0.3s, opacity 0.5s;
   }
 
   & .circleWrapper {

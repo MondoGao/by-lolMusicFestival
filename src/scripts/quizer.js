@@ -89,6 +89,8 @@ const quizer = {
     if (isRight) {
       $rightCard.addClass('congratulation');
 
+      $('#timerWrapper').addClass('update');
+
       this.score += 10;
     } else {
       this.fail += 1;
@@ -97,7 +99,7 @@ const quizer = {
       $clickedCard.addClass('wrongAnswer');
     }
 
-    setTimeout(this.switchQuiz, 1000);
+    setTimeout(this.switchQuiz, 700);
     this.updateRank();
   },
   finish() {
@@ -125,6 +127,8 @@ const quizer = {
     return this.fail === this.MAX_FAIL || this.current === this.total;
   },
   switchQuiz() {
+    $('#timerWrapper').removeClass('update');
+
     this.current += 1;
 
     if (this.isEnded()) {
