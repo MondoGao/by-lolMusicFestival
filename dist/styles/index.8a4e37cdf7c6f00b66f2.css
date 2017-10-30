@@ -806,7 +806,7 @@ img {
   width: 100%;
   height: 17.786667rem;
   background-color: #000;
-  background-image: url(/lol/assets/homeBottomHl.png?ee80596), url(/lol/assets/homeBackground.png?6a0129a);
+  background-image: url(/lol/assets/homeBottomHl.png?2cf2408), url(/lol/assets/homeBackground.png?edc92f2);
   background-size: cover;
   background-position: top center;
 }
@@ -853,7 +853,7 @@ img {
 
 #quiz {
   padding: 0.533333rem 0 0.266667rem;
-  background-image: url(/lol/assets/quizBg.png?525529d);
+  background-image: url(/lol/assets/quizBg.png?2efcfeb);
 }
 
 #quiz .levelWrapper {
@@ -1090,7 +1090,7 @@ img {
 /* Result */
 
 #result {
-  background-image: url(/lol/assets/resultBg.png?e8f5b77);
+  background-image: url(/lol/assets/resultBg.png?a8a0b74);
 }
 
 #result .medalContainer {
