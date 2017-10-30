@@ -17,7 +17,10 @@ const quizer = {
    * Select quiz set, prefer 'REC'
    */
   resetQuizSet() {
-    const isRec = Math.random() <= 0.3;
+    let isRec = Math.random() <= 0.3;
+    if (this.currentSet === 'REC') {
+      isRec = false;
+    }
 
     if (isRec) {
       this.currentSet = 'REC';
@@ -122,6 +125,8 @@ const quizer = {
 
         switchNextPage('quiz', 'result');
       });
+
+    _czc.push(["_trackEvent", '游戏', '完成', this.currentSet, this.score]);
   },
   isEnded() {
     return this.fail === this.MAX_FAIL || this.current === this.total;
