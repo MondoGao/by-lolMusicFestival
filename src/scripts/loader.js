@@ -5,9 +5,10 @@ import { switchNextPage } from './helpers';
 import { publicPath } from '../../settings';
 
 let assets = {};
-const loadingStrip = $('#loadingStrip');
+const $loadingStrip = $('#loadingStrip');
+const $loadingTip = $('#loadingTip');
 
-export function loadAssetsList() {
+function loadAssetsList() {
   return fetch(`${publicPath}manifest.json`)
     .then(data => data.json())
     .then((data) => {
@@ -16,23 +17,35 @@ export function loadAssetsList() {
     });
 }
 
+function resetStrip() {
+  $loadingStrip.css('left', '-100%');
+}
+
 export function isFirstLoad() {
   return Object.keys(assets).length < 1;
 }
 
 export function createLoader(regx, include = true, toPage = 'home') {
-  return new Promise((resolve, reject) => {
+  resetStrip();
+
+  return new Promise((resolve) => {
+    const start = Date.now();
     const loader = preloader({
       xhrImages: false,
     });
 
     loader.on('progress', (progress) => {
-      loadingStrip.css('left', `${-(1 - progress) * 100}%`);
+      $loadingStrip.css('left', `${-(1 - progress) * 100}%`);
     });
     loader.on('complete', () => {
-      loadingStrip.css('left', '0');
+      $loadingStrip.css('left', '0');
 
-      setTimeout(switchNextPage, 500, 'load', toPage);
+      let remainTime = 1500 - Date.now() + start;
+      if (remainTime < 0) {
+        remainTime = 0;
+      }
+
+      setTimeout(switchNextPage, remainTime, 'load', toPage);
 
       resolve();
     });
@@ -48,12 +61,16 @@ export function createLoader(regx, include = true, toPage = 'home') {
 }
 
 export function quizLoad(quizIds = []) {
+  $loadingTip.text('音乐排位赛正在匹配中');
+
   const regStr = `quiz/(${quizIds.join('|')})/`;
 
   return createLoader(new RegExp(regStr), true, 'quiz');
 }
 
 export function initLoad() {
+  $loadingTip.text('加载中');
+
   if (isFirstLoad()) {
     return loadAssetsList()
       .then(() => {
