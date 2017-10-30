@@ -219,7 +219,7 @@ img {
 
 /* Quiz */
 #quiz {
-  padding: 40px 0 20px;
+  padding-top: 40px;
   background-image: url(./assets/quizBg.png);
 
   & .levelWrapper {
@@ -318,56 +318,32 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-content: space-between;
     margin: 42px auto 0;
     width: calc(750px - 46px);
-    height: calc(234px * 2 + 31px);
 
     &.text {
-      height: calc(139px * 2 + 31px);
-
       & .answerCard {
-        height: 139px;
+        height: 180px;
 
         & span {
           display: inline-block;
-          top: 44px;
+          top: 57px;
           left: 0;
           width: 100%;
-          font-size: 38px;
+          font-size: 36px;
           text-align: center;
         }
 
         &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
-          background: url(./assets/cardText.svg) no-repeat center / contain;
+          background-image: url(./assets/cardText.svg);
         }
 
         &.congratulation::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
-          background: url(./assets/cardAnswer.svg) no-repeat center / 100%;
-          animation: fadeIn 0.3s;
+          background-image: url(./assets/cardTextRight.svg);
         }
 
         &.wrongAnswer::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
-          background: url(./assets/cardSelect.svg) no-repeat center / 100%;
-          animation: fadeIn 0.3s;
+          background-image: url(./assets/cardTextWrong.svg);
         }
       }
     }
@@ -376,6 +352,7 @@ img {
   & .answerCard {
     position: relative;
     display: inline-block;
+    margin-bottom: 30px;
     padding: 31px 0 19px;
     width: 330px;
     height: 234px;
@@ -414,7 +391,7 @@ img {
       left: 0;
       height: 100%;
       width: 100%;
-      background: url(./assets/cardAnswer.svg) no-repeat center / contain;
+      background: url(./assets/cardRight.svg) no-repeat center / contain;
       animation: fadeIn 0.3s;
     }
 
@@ -425,7 +402,7 @@ img {
       left: 0;
       height: 100%;
       width: 100%;
-      background: url(./assets/cardSelect.svg) no-repeat center / contain;
+      background: url(./assets/cardWrong.svg) no-repeat center / contain;
       animation: fadeIn 0.3s;
     }
   }
