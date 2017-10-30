@@ -4,15 +4,14 @@ import './index.css';
 
 import { initLoad } from './scripts/loader';
 
-import audioController from './scripts/audioController';
 import quizer from './scripts/quizer';
-import { switchNextPage } from './scripts/helpers';
+import { switchNextPage, configWechat } from './scripts/helpers';
 
 initLoad();
 quizer.init();
 
 $(() => {
-  const $share = $('#share')
+  const $share = $('#share');
 
   $('#btnStart').on('click', () => {
     switchNextPage('home', 'load');
@@ -29,5 +28,7 @@ $(() => {
 
   $share.on('click', () => {
     $share.removeClass('show');
-  })
+  });
+
+  configWechat();
 });

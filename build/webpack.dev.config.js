@@ -45,6 +45,10 @@ module.exports = smart(baseConfig, {
         target: 'https://weixin.bingyan-tech.hustonline.net',
         changeOrigin: true,
       },
+      '/service': {
+        target: 'https://weixin.bingyan-tech.hustonline.net',
+        changeOrigin: true,
+      },
     },
   },
 });
