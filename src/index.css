@@ -348,8 +348,7 @@ img {
           background: url(./assets/cardText.svg) no-repeat center / contain;
         }
 
-        &.congratulation::after,
-        &.rightAnswer::after {
+        &.congratulation::after {
           content: "";
           position: absolute;
           top: 0;
@@ -408,8 +407,7 @@ img {
       background: url(./assets/card.svg) no-repeat center / contain;
     }
 
-    &.congratulation::after,
-    &.rightAnswer::after {
+    &.congratulation::after {
       content: "";
       position: absolute;
       top: 0;
