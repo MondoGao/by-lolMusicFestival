@@ -7,6 +7,7 @@ const baseConfig = require('./webpack.base.config');
 module.exports = smart(baseConfig, {
   entry: {
     index: [
+      'babel-polyfill',
       'whatwg-fetch',
       './src/index.js',
     ],
