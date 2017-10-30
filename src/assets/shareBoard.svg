@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="653px" height="603px" viewBox="0 0 653 603" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-7-Copy-2" transform="translate(-68.000000, -136.000000)">
+            <g id="Group-4" transform="translate(68.000000, 130.000000)">
+                <path d="M475.896918,378.38431 L610.421465,44.2160211" id="Path-208" stroke="#FFFFFF" stroke-width="4"></path>
+                <polygon id="Triangle-5" stroke="#FFFFFF" stroke-width="3" transform="translate(617.820545, 27.224886) rotate(21.000000) translate(-617.820545, -27.224886) " points="617.820545 8.22488591 641.820545 46.2248859 593.820545 46.2248859"></polygon>
+                <path d="M598.591512,30.0946861 L630.40616,42.1644038" id="Path-209" stroke="#FFFFFF" stroke-width="2"></path>
+                <path d="M650.263906,592.002281 L650.263906,390.997719 C650.17603,390.999239 650.088058,391 650,391 C642.393846,391 636.109956,385.338719 635.132171,378 L343.867829,378 C342.890044,385.338719 336.606154,391 329,391 C321.393846,391 315.109956,385.338719 314.132171,378 L14.8678287,378 C13.9772175,384.684444 8.68444418,389.977218 2,390.867829 L2,592.132171 C9.33871892,593.109956 15,599.393846 15,607 L314,607 C314,598.715729 320.715729,592 329,592 C337.284271,592 344,598.715729 344,607 L635,607 C635,598.715729 641.715729,592 650,592 C650.088058,592 650.17603,592.000761 650.263906,592.002281 Z" id="Combined-Shape" stroke="#FFFFFF" stroke-width="4"></path>
+                <circle id="Oval-5" fill="#FFFFFF" cx="46.2556564" cy="389.544451" r="2"></circle>
+                <circle id="Oval-5" fill="#FFFFFF" cx="610.493455" cy="389.593823" r="2"></circle>
+                <path d="M53.5,389.5 L300.5,389.5" id="Line-3" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M355.5,389.5 L602.5,389.5" id="Line-3" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+                <rect id="Rectangle-16" fill="#FFFFFF" transform="translate(328.780222, 603.761270) rotate(45.000000) translate(-328.780222, -603.761270) " x="325.280222" y="600.26127" width="7" height="7"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

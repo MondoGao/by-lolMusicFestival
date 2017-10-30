@@ -2,30 +2,33 @@ import $ from 'zepto';
 
 import './index.css';
 
-import { initLoad, quizLoad } from './scripts/loader';
+import { initLoad } from './scripts/loader';
 
-import audioController from './scripts/audioController';
 import quizer from './scripts/quizer';
-import { switchNextPage } from './scripts/helpers';
+import { switchNextPage, configWechat } from './scripts/helpers';
 
 initLoad();
+quizer.init();
 
 $(() => {
+  const $share = $('#share');
+
   $('#btnStart').on('click', () => {
     switchNextPage('home', 'load');
-    quizLoad([1, 2])
-      .then(() => {
-        audioController.play();
-      });
+    quizer.load('quiz');
   });
 
   $('#btnShare').on('click', () => {
-    alert('点击右上角分享本网页哦~');
+    $share.addClass('show');
   });
 
   $('#btnReplay').on('click', () => {
     quizer.replay();
   });
 
-  quizer.init();
+  $share.on('click', () => {
+    $share.removeClass('show');
+  });
+
+  configWechat();
 });
