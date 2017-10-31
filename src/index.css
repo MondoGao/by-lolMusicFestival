@@ -470,13 +470,12 @@ img {
   & .board {
     position: relative;
     margin: 13px auto 0;
-    padding: 50px 82px 20px;
     width: 698px;
     height: 430px;
     background: url(./assets/board.svg) no-repeat center / contain;
     color: var(--paraColor);
     text-align: center;
-    font-size: 32px;
+    font-size: 40px;
     letter-spacing: 4.44px;
     line-height: 64px;
 
@@ -496,6 +495,14 @@ img {
       background: linear-gradient(#f7cf94, #fadeb7);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+
+    & p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 560px;
+      transform: translate(-50%, -50%);
     }
   }
 
