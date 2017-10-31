@@ -48,8 +48,8 @@ module.exports = {
         test: /\.(mp3)$/,
         loader: 'file-loader',
         options: {
-          context: resolve(__dirname, '../src/assets'),
-          name: 'assets/[path][name].[ext]?[hash:7]',
+          context: resolve(__dirname, '../src'),
+          name: '[path][name].[ext]?[hash:7]',
         },
       },
     ],
