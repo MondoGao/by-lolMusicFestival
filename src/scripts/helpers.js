@@ -7,6 +7,10 @@ import imgIcon from '../assets/icon.png';
 export function switchNextPage(page, nextPage) {
   $(`#${page}`).removeClass('show').addClass('finish');
   $(`#${nextPage}`).removeClass('finish').addClass('show');
+
+  if (nextPage) {
+    _czc.push(['_trackEvent', '页面', '切换至', nextPage, 0, page]);
+  }
 }
 
 /**
