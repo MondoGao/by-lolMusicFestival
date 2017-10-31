@@ -430,7 +430,7 @@ export const quizData = [
       ' Guangmo',
     ],
     id: 68,
-    desc: '由Alan Walker唱的这首歌的创作的曲名是？',
+    desc: '由Alan Walker创作的这首歌的曲名是？',
   },
   {
     hasImage: true,
