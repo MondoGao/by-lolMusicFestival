@@ -174,7 +174,7 @@ img {
     height: 1334px;
     background-color: var(--mainBackgroundColor);
     background-image: url('./assets/commercialLogo.png'), url(./assets/homeBottomHl.png), url(./assets/homeBackground.png);
-    background-size: 514px 65px, cover, cover;
+    background-size: 320px 65px, cover, cover;
     background-position: center 96%, top center, top center;
   }
 
