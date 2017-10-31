@@ -17,14 +17,19 @@
       </script>
     </head>
     <body>
+      <div style="display:none;">
+        <audio id="audioWelcome" src="<%= require('./sounds/welcome.mp3') %>"></audio>
+        <audio id="audioStart" src="<%= require('./sounds/start.mp3') %>"></audio>
+        <% for(let i = 1; i < 7; i++) { %>
+        <audio id="audioKill<%= i %>" src="<%= require(`./sounds/${i}k.mp3`) %>"></audio>
+        <% } %>
+      </div>
       <div id="load" class="page show">
         <div class="logoWrapper">
           <div class="circleWrapper">
-            <div class="circle circle1"></div>
-            <div class="circle circle2"></div>
-            <div class="circle circle3"></div>
-            <div class="circle circle4"></div>
-            <div class="circle circle5"></div>
+            <% for(let i = 1; i < 6; i++) { %>
+            <div class="circle circle<%= i %>"></div>
+            <% } %>
           </div>
           <img class="loadingLogo" src="<%= require('./assets/loadingLogo.png') %>" alt=""/>
         </div>
@@ -46,11 +51,9 @@
       <div id="quiz" class="page">
         <div id="timerWrapper" class="timerWrapper">
           <div class="circleWrapper">
-            <div class="circle circle1"></div>
-            <div class="circle circle2"></div>
-            <div class="circle circle3"></div>
-            <div class="circle circle4"></div>
-            <div class="circle circle5"></div>
+            <% for(let i = 1; i < 6; i++) { %>
+            <div class="circle circle<%= i %>"></div>
+            <% } %>
           </div>
           <div id="audioTimer" class="timer"></div>
           <audio id="audio" style="display: none;">
@@ -62,12 +65,9 @@
             当前段位-<span id="shortRank">青铜</span>
           </span>
           <span class="starWrapper">
-            <span id="star1" class="star"></span>
-            <span id="star2" class="star"></span>
-            <span id="star3" class="star"></span>
-            <span id="star4" class="star"></span>
-            <span id="star5" class="star"></span>
-            <span id="star6" class="star"></span>
+            <% for(let i = 1; i < 7; i++) { %>
+            <span id="star<%= i %>" class="star"></span>
+            <% } %>
           </span>
         </div>
         <div class="quizCount">

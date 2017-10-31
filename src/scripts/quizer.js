@@ -34,6 +34,7 @@ const quizer = {
     this.total = this.getSetData().length;
     this.score = 0;
     this.fail = 0;
+    this.combo  = 0;
   },
   /**
    * Return quiz arr
@@ -99,8 +100,12 @@ const quizer = {
       $('#timerWrapper').addClass('update');
 
       this.score += 10;
+      this.combo += 1;
+
+      $(`#audioKill${this.combo}`)[0].play();
     } else {
       this.fail += 1;
+      this.combo = 0;
 
       $(`#star${this.current + 1}`).addClass('wrong');
 
