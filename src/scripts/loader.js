@@ -84,7 +84,7 @@ export function createLoader(regx, include = true, toPage = 'home') {
     loader.load();
 
     setTimeout(showLoadingFestivalTip, 3000);
-    failTimer = setTimeout(handleLoadingFailed, 300000);
+    failTimer = setTimeout(handleLoadingFailed, 40000);
   });
 }
 
