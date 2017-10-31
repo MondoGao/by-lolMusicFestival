@@ -8,6 +8,10 @@ export function switchNextPage(page, nextPage) {
   $(`#${page}`).removeClass('show').addClass('finish');
   $(`#${nextPage}`).removeClass('finish').addClass('show');
 
+  setTimeout(() => {
+    $(`#${page}`).removeClass('show finish');
+  }, 1000);
+
   if (nextPage) {
     _czc.push(['_trackEvent', '页面', '切换至', nextPage, 0, page]);
   }
