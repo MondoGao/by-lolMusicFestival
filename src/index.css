@@ -279,7 +279,7 @@ img {
     text-align: center;
     height: var(--circlrWrapperWidth)px;
     line-height: calc(var(--circlrWrapperWidth) - 0)px;
-    background: url(./assets/timer.svg) no-repeat center / 173px 179px;
+    background: url(./assets/timer.png) no-repeat center / 173px 179px;
     color: var(--secondColor);
     font-size: 54px;
     -webkit-text-stroke-width: 1px;
@@ -338,17 +338,6 @@ img {
       & .answerCard {
         height: 180px;
 
-        & span {
-          display: inline-block;
-          top: 50%;
-          left: 0;
-          padding: 0 20px;
-          width: 100%;
-          font-size: 36px;
-          text-align: center;
-          transform: translateY(-50%);
-        }
-
         &::before {
           background-image: url(./assets/cardText.svg);
         }
@@ -368,7 +357,7 @@ img {
     position: relative;
     display: inline-block;
     margin-bottom: 30px;
-    padding: 31px 0 19px;
+    padding: 31px 0 30px;
     width: 330px;
     height: 234px;
     flex: none;
@@ -376,15 +365,20 @@ img {
 
     & img {
       width: 100%;
-      max-height: 100%;
+      height: 100%;
     }
 
     & span {
       position: absolute;
-      top: 51px;
-      left: 22px;
+      display: inline-block;
+      top: 50%;
+      left: 0;
+      padding: 0 20px;
+      width: 100%;
       font-size: 36px;
       letter-spacing: 5px;
+      text-align: center;
+      transform: translateY(-50%);
 
       @apply --mainTextShadow;
     }

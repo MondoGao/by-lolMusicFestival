@@ -180,13 +180,18 @@ const quizer = {
 
     this.$shortRank.text(rank.name.slice(2));
 
-    this.$ranks.forEach((rankEl) => {
-      $(rankEl).text(rank.name);
-    });
+    // update rank after animation
+    setTimeout(() => {
+      this.$ranks.forEach((rankEl) => {
+        $(rankEl).text(rank.name);
+      });
 
-    this.$medal.attr('src', rankResolveContext(`./${rankEngName}.svg`));
+      this.$medal.attr('src', rankResolveContext(`./${rankEngName}.svg`));
 
-    $('#praise').text(rank.praise);
+      $('#praise').text(rank.praise);
+
+      this.$beatPercent.text(`${Math.ceil((this.beatPlayerNum / this.totalPlayerNum) * 100)}%`);
+    }, 500);
   },
   replay() {
     this.init();
@@ -241,8 +246,6 @@ const quizer = {
     this.$totalNum.text(this.total);
 
     this.updateRank();
-
-    this.$beatPercent.text(`${Math.ceil((this.beatPlayerNum / this.totalPlayerNum) * 100)}%`);
   },
 };
 
