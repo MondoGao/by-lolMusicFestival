@@ -16,7 +16,7 @@ export const quizSetData = {
 export const quizData = [
   {
     id: 201,
-    desc: '点击上方播放小按钮，在下方选出英雄角色名',
+    desc: '听听是谁在说话',
     options: [
       '蛮三刀',
       '德邦',
@@ -776,7 +776,7 @@ export const quizData = [
     options: [
       '霸天零式赛恩',
       '圣枪游侠卢锡安',
-      '霸天零式赛恩',
+      '九尾妖狐阿狸',
       '暴走萝莉金克丝',
     ],
     id: 29,

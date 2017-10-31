@@ -1,3 +1,5 @@
+@import '~animate.css';
+
 @keyframes spin {
   from {
     transform: rotate(0);
@@ -5,28 +7,6 @@
 
   to {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-40%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
   }
 }
 

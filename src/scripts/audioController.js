@@ -40,6 +40,10 @@ const audioController = {
   handlePlaying() {
     this.isPlaying = true;
 
+    if (this.onPlay) {
+      this.onPlay();
+    }
+
     this.sync();
   },
   handleEnded() {
