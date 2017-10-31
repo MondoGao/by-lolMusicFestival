@@ -285,7 +285,7 @@ img {
     font-size: 54px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #d9b05b;
-    transition: font-size 0.3s, opacity 0.5s;
+    transition: opacity 0.5s;
   }
 
   & .circleWrapper {
