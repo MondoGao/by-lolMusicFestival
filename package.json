@@ -5,8 +5,9 @@
   "author": "Mondo <mondogao@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=develop webpack-dev-server --config build/webpack.dev.config.js",
-    "build": "rm -rf dist && cross-env NODE_ENV=production webpack --config build/webpack.prod.config.js",
+    "dev": "yarn run fontmin && cross-env NODE_ENV=develop webpack-dev-server --config build/webpack.dev.config.js",
+    "build": "yarn run fontmin && rm -rf dist && cross-env NODE_ENV=production webpack --config build/webpack.prod.config.js",
+    "fontmin": "node build/fontmin.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:css": "stylelint \"src/**/*.css\"",

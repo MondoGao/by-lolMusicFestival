@@ -14,18 +14,18 @@ files.forEach((filePath) => {
 });
 
 const fontmin = new Fontmin()
-  .src(srcPath) // 输入配置
-  .use(Fontmin.glyph({ // 字型提取插件
-    text, // 所需文字
+  .src(srcPath)
+  .use(Fontmin.glyph({
+    text,
   }))
-  .use(Fontmin.ttf2eot()) // eot 转换插件
-  .use(Fontmin.ttf2woff()) // woff 转换插件
-  .use(Fontmin.ttf2svg()) // svg 转换插件
-  .dest(destPath); // 输出配置
-// 执行
+  .use(Fontmin.ttf2eot())
+  .use(Fontmin.ttf2woff())
+  .use(Fontmin.ttf2svg())
+  .dest(destPath);
+
 fontmin.run((err, files, stream) => {
-  if (err) { // 异常捕捉
+  if (err) {
     console.error(err);
   }
-  console.log('done'); // 成功
+  console.log('font compress finish');
 });
