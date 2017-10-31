@@ -74,7 +74,7 @@ export function initLoad() {
   if (isFirstLoad()) {
     return loadAssetsList()
       .then(() => {
-        createLoader(/\.mp3|Bg|Background|quiz/, false);
+        return createLoader(/\.mp3|Bg|Background|quiz/, false);
       });
   }
 

@@ -52,12 +52,15 @@ img {
   overflow-y: auto;
   transition: transform 1s;
   transform: translateX(100%);
+  z-index: -1;
 
   &.show {
+    z-index: 0;
     transform: translateX(0);
   }
 
   &.finish {
+    z-index: 0;
     transform: translateX(-100%);
   }
 }
@@ -114,7 +117,10 @@ img {
   padding-top: 18%;
   text-align: center;
   background-color: var(--loadBackgroundColor);
-  z-index: 10;
+
+  &.show {
+    z-index: 10;
+  }
 
   & h4 {
     margin-top: 120px;
@@ -492,6 +498,24 @@ img {
       width: 666px;
       background-image: url(./assets/btnLarge.svg);
     }
+  }
+}
+
+#copyright {
+  margin: 10px 0;
+  font-family: BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  opacity: 0.4;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    background: url(./assets/bingyanLogo.png) no-repeat center / contain;
+    vertical-align: bottom;
   }
 }
 
