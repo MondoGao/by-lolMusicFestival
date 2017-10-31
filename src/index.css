@@ -174,7 +174,7 @@ img {
     height: 1334px;
     background-color: var(--mainBackgroundColor);
     background-image: url('./assets/commercialLogo.png'), url(./assets/homeBottomHl.png), url(./assets/homeBackground.png);
-    background-size: 514px 65px, cover, cover;
+    background-size: 320px 65px, cover, cover;
     background-position: center 96%, top center, top center;
   }
 
@@ -240,7 +240,7 @@ img {
     line-height: 48px;
     font-size: 24px;
     letter-spacing: 3.33px;
-    background: url(./assets/label.svg) center / contain;
+    background: url(./assets/label.svg) no-repeat center / contain;
   }
 
   & .timerWrapper {
@@ -366,7 +366,7 @@ img {
     width: 330px;
     height: 234px;
     flex: none;
-    animation: slideDown 0.8s;
+    animation-duration: 0.8s;
 
     & img {
       width: 100%;

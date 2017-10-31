@@ -92,6 +92,8 @@ const quizer = {
     if (isRight) {
       $rightCard.addClass('congratulation');
 
+      $('#shortRankWrapper').addClass('animated tada');
+
       $('#timerWrapper').addClass('update');
 
       this.score += 10;
@@ -133,6 +135,7 @@ const quizer = {
   },
   switchQuiz() {
     $('#timerWrapper').removeClass('update');
+    $('#shortRankWrapper').removeClass('animated tada');
 
     this.current += 1;
 
@@ -147,7 +150,7 @@ const quizer = {
   },
   createAnswerCard({ id, hasImage }, optionIndex, optionDesc) {
     const card = $(`
-      <li class="answerCard">
+      <li class="answerCard fadeInDown animated">
         ${hasImage ?
             `<img src="${optionResolveContext(`./${id}/${optionIndex + 1}.jpg`)}" alt=""/>` : ''}
         <span>${optionDesc}</span>
@@ -189,7 +192,21 @@ const quizer = {
   },
   load(toPage = '') {
     return quizLoad(this.getSetData(), toPage)
-      .then(() => audioController.play());
+      .then(() => {
+        audioController.play();
+
+        // Tip for iOS
+        setTimeout(() => {
+          if (!audioController.isPlaying) {
+            this.$quizQuestion.text('点击上方按钮播放题目哦！').addClass('animated');
+
+            audioController.onPlay = () => {
+              this.$quizQuestion.text(this.getCurrentQuiz().desc);
+              this.$quizQuestion.removeClass('animated');
+            };
+          }
+        }, 100);
+      });
   },
   sync() {
     if (!this.isEnded()) {

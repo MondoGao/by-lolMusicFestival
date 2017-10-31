@@ -7,6 +7,10 @@ import imgIcon from '../assets/icon.png';
 export function switchNextPage(page, nextPage) {
   $(`#${page}`).removeClass('show').addClass('finish');
   $(`#${nextPage}`).removeClass('finish').addClass('show');
+
+  if (nextPage) {
+    _czc.push(['_trackEvent', '页面', '切换至', nextPage, 0, page]);
+  }
 }
 
 /**
@@ -31,33 +35,59 @@ export function getjssdkConfig(url) {
 }
 
 export function reconfigWechat({ link, title, imgUrl, desc, label }) {
+  const realImgUrl = imgIcon.match(/hustonline/) ? imgIcon : `http://weixin.bingyan-tech.hustonline.net${imgIcon}`;
+
   wx.onMenuShareTimeline({
-    title,
     link,
-    imgUrl,
+    title: desc,
+    imgUrl: realImgUrl,
+    success() {
+      _czc.push(['_trackEvent', '微信', '分享', '朋友圈', 1]);
+    },
+    cancel() {
+      _czc.push(['_trackEvent', '微信', '分享', '朋友圈', 0]);
+    },
   });
 
   wx.onMenuShareAppMessage({
     title,
     desc,
     link,
-    imgUrl,
+    imgUrl: realImgUrl,
     type: 'link',
     dataUrl: '',
+    success() {
+      _czc.push(['_trackEvent', '微信', '分享', '好友', 1]);
+    },
+    cancel() {
+      _czc.push(['_trackEvent', '微信', '分享', '好友', 0]);
+    },
   });
 
   wx.onMenuShareQQ({
     title,
     desc,
     link,
-    imgUrl,
+    imgUrl: realImgUrl,
+    success() {
+      _czc.push(['_trackEvent', '微信', '分享', 'QQ', 1]);
+    },
+    cancel() {
+      _czc.push(['_trackEvent', '微信', '分享', 'QQ', 0]);
+    },
   });
 
   wx.onMenuShareQZone({
     title,
     desc,
     link,
-    imgUrl,
+    imgUrl: realImgUrl,
+    success() {
+      _czc.push(['_trackEvent', '微信', '分享', '空间', 1]);
+    },
+    cancel() {
+      _czc.push(['_trackEvent', '微信', '分享', '空间', 0]);
+    },
   });
 }
 
@@ -74,13 +104,19 @@ export function configWechat() {
       });
 
       wx.ready(() => {
+        _czc.push(['_trackEvent', '微信', '签名', '成功', 1]);
+
         reconfigWechat({
           link: window.location.href.split('#')[0],
           title: '英雄联盟音乐排位赛',
           imgUrl: imgIcon,
-          desc: '最强王者的你，也不过是音乐排位赛的菜鸡！',
+          desc: '最强王者的你，也不过是音乐排位赛的菜鸡！| 英雄联盟音乐排位赛',
           label: '',
         });
       });
+
+      wx.error(() => {
+        _czc.push(['_trackEvent', '微信', '签名', '失败', 0]);
+      })
     });
 }
