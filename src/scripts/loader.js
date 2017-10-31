@@ -99,12 +99,14 @@ export function quizLoad(quizIds = [], toPage = '') {
 }
 
 export function initLoad() {
+  const reg = /quiz\//;
+
   if (isFirstLoad()) {
     return loadAssetsList()
       .then(() => {
-        return createLoader(/\.mp3|Bg|Background|quiz/, false);
+        return createLoader(reg, false);
       });
   }
 
-  return createLoader(/\.mp3|Bg|Background|quiz/, false);
+  return createLoader(reg, false);
 }
