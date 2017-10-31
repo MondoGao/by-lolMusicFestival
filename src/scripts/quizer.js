@@ -108,6 +108,8 @@ const quizer = {
     this.updateRank();
   },
   finish() {
+    _czc.push(["_trackEvent", '游戏', '完成', this.currentSet, this.score]);
+
     fetch(`${publicPath}rank`, {
       method: 'POST',
       credentials: 'include',
@@ -128,7 +130,16 @@ const quizer = {
         switchNextPage('quiz', 'result');
       });
 
-    _czc.push(["_trackEvent", '游戏', '完成', this.currentSet, this.score]);
+    const rankEngName = getRankName(this.score);
+    const rank = ranksData[rankEngName];
+
+    reconfigWechat({
+      link: window.location.href.split('#')[0],
+      title: '英雄联盟音乐排位赛',
+      imgUrl: imgIcon,
+      desc: rank.shareDesc,
+      label: '',
+    });
   },
   isEnded() {
     return this.fail === this.MAX_FAIL || this.current === this.total;
@@ -174,14 +185,6 @@ const quizer = {
     });
 
     this.$medal.attr('src', rankResolveContext(`./${rankEngName}.svg`));
-
-    reconfigWechat({
-      link: window.location.href.split('#')[0],
-      title: '英雄联盟音乐排位赛',
-      imgUrl: imgIcon,
-      desc: rank.shareDesc,
-      label: '',
-    });
 
     $('#praise').text(rank.praise);
   },
