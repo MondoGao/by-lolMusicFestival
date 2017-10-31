@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="306px" height="60px" viewBox="0 0 306 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 9</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-7" transform="translate(-417.000000, -521.000000)" stroke="#F6D194">
+            <g id="Group-8" transform="translate(10.000000, 521.000000)">
+                <g id="label">
+                    <g id="Group-9" transform="translate(407.000000, 0.000000)">
+                        <path d="M31.9626816,1.01590094 L1.70131889,29.6048489 L31.9626816,58.1937968 L304.628991,58.1937968 L304.628991,1.01590094 L31.9626816,1.01590094 Z" id="Rectangle-6" stroke-width="2"></path>
+                        <ellipse id="Oval-15" cx="26.7749524" cy="30.683348" rx="4.15488215" ry="4"></ellipse>
+                        <path d="M297.404737,1.29493519 L297.404737,58.2631043" id="Path-5"></path>
+                        <polyline id="Path-4" points="28.3307895 34.5036188 44.2380215 50.1778958 22.8942249 50.1778958"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

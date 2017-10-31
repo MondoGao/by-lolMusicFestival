@@ -64,6 +64,8 @@ const quizer = {
     this.$beatPercent = $('#beatPercent');
     this.$medal = $('#medal');
 
+    $('.star').forEach(star => $(star).removeClass('right wrong'));
+
     this.handleOptionClick = this.handleOptionClick.bind(this);
     this.switchQuiz = this.switchQuiz.bind(this);
 
@@ -90,15 +92,17 @@ const quizer = {
     const $clickedCard = $(cards[optionIndex]);
 
     if (isRight) {
-      $rightCard.addClass('congratulation');
+      $(`#star${this.current + 1}`).addClass('right');
 
-      $('#shortRankWrapper').addClass('animated tada');
+      $rightCard.addClass('congratulation');
 
       $('#timerWrapper').addClass('update');
 
       this.score += 10;
     } else {
       this.fail += 1;
+
+      $(`#star${this.current + 1}`).addClass('wrong');
 
       $rightCard.addClass('rightAnswer');
       $clickedCard.addClass('wrongAnswer');
@@ -146,7 +150,6 @@ const quizer = {
   },
   switchQuiz() {
     $('#timerWrapper').removeClass('update');
-    $('#shortRankWrapper').removeClass('animated tada');
 
     this.current += 1;
 
@@ -178,7 +181,7 @@ const quizer = {
     const rankEngName = getRankName(this.score);
     const rank = ranksData[rankEngName];
 
-    this.$shortRank.text(rank.name.slice(2));
+    this.$shortRank.text(rank.name);
 
     // update rank after animation
     setTimeout(() => {
