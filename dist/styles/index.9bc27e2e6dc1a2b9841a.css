@@ -556,10 +556,10 @@ a:visited {
   display: none;
 }@font-face {
   font-family: "MFBanHei";
-  src: url(/lol/fonts/MFBanHei.eot?900dd0f);
-  src: url(/lol/fonts/MFBanHei.eot?900dd0f?#iefix) format("embedded-opentype"),
-    url(/lol/fonts/MFBanHei.woff?fa6b125) format("woff"),
-    url(/lol/fonts/MFBanHei.ttf?7723640) format("truetype"),
+  src: url(/lol/fonts/MFBanHei.eot?a3d1417);
+  src: url(/lol/fonts/MFBanHei.eot?a3d1417?#iefix) format("embedded-opentype"),
+    url(/lol/fonts/MFBanHei.woff?58e8572) format("woff"),
+    url(/lol/fonts/MFBanHei.ttf?dc930de) format("truetype"),
     url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciLz4=#MFBanHei) format("svg");
   font-style: normal;
   font-weight: normal;
