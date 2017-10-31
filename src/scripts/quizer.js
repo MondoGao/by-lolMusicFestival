@@ -92,6 +92,8 @@ const quizer = {
     if (isRight) {
       $rightCard.addClass('congratulation');
 
+      $('#shortRankWrapper').addClass('animated tada');
+
       $('#timerWrapper').addClass('update');
 
       this.score += 10;
@@ -133,6 +135,7 @@ const quizer = {
   },
   switchQuiz() {
     $('#timerWrapper').removeClass('update');
+    $('#shortRankWrapper').removeClass('animated tada');
 
     this.current += 1;
 
