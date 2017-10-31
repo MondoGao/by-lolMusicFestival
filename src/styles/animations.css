@@ -32,7 +32,12 @@
 
 @keyframes zoomInDownScale {
   from {
+    opacity: 0;
     transform: translateY(-50%) scale(4);
+  }
+
+  35% {
+    opacity: 1;
   }
 
   to {
