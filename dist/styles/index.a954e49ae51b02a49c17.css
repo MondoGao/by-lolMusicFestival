@@ -4007,14 +4007,17 @@ img {
   transition: transform 1s, -webkit-transform 1s;
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
+  z-index: -1;
 }
 
 .page.show {
+  z-index: 0;
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
 .page.finish {
+  z-index: 0;
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
 }
@@ -4078,6 +4081,9 @@ img {
   padding-top: 18%;
   text-align: center;
   background-color: #0a0c10;
+}
+
+#load.show {
   z-index: 10;
 }
 
@@ -4489,6 +4495,24 @@ img {
 #result .btn.btnLarge {
   width: 8.88rem;
   background-image: url(/lol/assets/btnLarge.svg?6e6d358);
+}
+
+#copyright {
+  margin: 0.133333rem 0;
+  font-family: BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.24rem;
+  text-align: center;
+  opacity: 0.4;
+}
+
+#copyright::before {
+  content: "";
+  display: inline-block;
+  margin-right: 0.066667rem;
+  width: 0.266667rem;
+  height: 0.266667rem;
+  background: url(/lol/assets/bingyanLogo.png?f466998) no-repeat center / contain;
+  vertical-align: bottom;
 }
 
 #share {

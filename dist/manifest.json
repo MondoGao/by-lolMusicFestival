@@ -1,4 +1,5 @@
 {
+  "/lol/assets/bingyanLogo.png": "/lol/assets/bingyanLogo.png?f466998",
   "/lol/assets/board.svg": "/lol/assets/board.svg?fb7d9ba",
   "/lol/assets/btn.svg": "/lol/assets/btn.svg?c380c50",
   "/lol/assets/btnLarge.svg": "/lol/assets/btnLarge.svg?6e6d358",
@@ -135,7 +136,7 @@
   "/lol/fonts/MFBanHei.eot": "/lol/fonts/MFBanHei.eot?900dd0f",
   "/lol/fonts/MFBanHei.ttf": "/lol/fonts/MFBanHei.ttf?7723640",
   "/lol/fonts/MFBanHei.woff": "/lol/fonts/MFBanHei.woff?fa6b125",
-  "/lol/index.css": "/lol/styles/index.c4c728824a6adc13a423.css",
-  "/lol/index.js": "/lol/scripts/index.c4c728824a6adc13a423.js",
-  "/lol/vendor.js": "/lol/scripts/vendor.c4c728824a6adc13a423.js"
+  "/lol/index.css": "/lol/styles/index.a954e49ae51b02a49c17.css",
+  "/lol/index.js": "/lol/scripts/index.a954e49ae51b02a49c17.js",
+  "/lol/vendor.js": "/lol/scripts/vendor.a954e49ae51b02a49c17.js"
 }
