@@ -34,7 +34,7 @@ const quizer = {
     this.total = this.getSetData().length;
     this.score = 0;
     this.fail = 0;
-    this.combo  = 0;
+    this.combo = 0;
   },
   /**
    * Return quiz arr
@@ -102,9 +102,18 @@ const quizer = {
       this.score += 10;
       this.combo += 1;
 
-      $(`#audioKill${this.combo}`)[0].play();
+      if (this.score !== 10) {
+        $(`#audioKill${this.combo}`)[0].play();
+      } else {
+        $('#audioFirst')[0].play();
+      }
     } else {
       this.fail += 1;
+
+      if (this.combo >= 2) {
+        $('#audioShutdown')[0].play();
+      }
+
       this.combo = 0;
 
       $(`#star${this.current + 1}`).addClass('wrong');
@@ -113,7 +122,7 @@ const quizer = {
       $clickedCard.addClass('wrongAnswer');
     }
 
-    setTimeout(this.switchQuiz, 700);
+    setTimeout(this.switchQuiz, 1200);
     this.updateRank();
   },
   finish() {
