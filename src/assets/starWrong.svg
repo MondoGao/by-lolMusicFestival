@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="31px" viewBox="0 0 32 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
     <title>Star</title>
     <desc>Created with Sketch.</desc>
-    <defs>
-        <linearGradient x1="50%" y1="100%" x2="50%" y2="-8.82960247%" id="linearGradient-1">
-            <stop stop-color="#D0D0D0" offset="0%"></stop>
-            <stop stop-color="#FFFFFF" offset="100%"></stop>
-        </linearGradient>
-    </defs>
+    <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="iPhone-7" transform="translate(-86.000000, -532.000000)" fill="url(#linearGradient-1)">
+        <g id="iPhone-7" transform="translate(-129.000000, -532.000000)" stroke="#FB5959">
             <g id="Group-8" transform="translate(10.000000, 521.000000)">
                 <g id="Group-7" transform="translate(30.767449, 11.863020)">
-                    <polygon id="Star" points="61.5 24.75 51.8015433 29.8487804 53.6537837 19.0493902 45.8075675 11.4012196 56.6507717 9.8256098 61.5 0 66.3492283 9.8256098 77.1924325 11.4012196 69.3462163 19.0493902 71.1984567 29.8487804"></polygon>
+                    <polygon id="Star" points="104.5 24.75 94.8015433 29.8487804 96.6537837 19.0493902 88.8075675 11.4012196 99.6507717 9.8256098 104.5 0 109.349228 9.8256098 120.192433 11.4012196 112.346216 19.0493902 114.198457 29.8487804"></polygon>
                 </g>
             </g>
         </g>
