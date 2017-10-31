@@ -556,10 +556,10 @@ a:visited {
   display: none;
 }@font-face {
   font-family: "MFBanHei";
-  src: url(/lol/fonts/MFBanHei.eot?4651c92);
-  src: url(/lol/fonts/MFBanHei.eot?4651c92?#iefix) format("embedded-opentype"),
-    url(/lol/fonts/MFBanHei.woff?565a74c) format("woff"),
-    url(/lol/fonts/MFBanHei.ttf?685335a) format("truetype"),
+  src: url(/lol/fonts/MFBanHei.eot?bd005dd);
+  src: url(/lol/fonts/MFBanHei.eot?bd005dd?#iefix) format("embedded-opentype"),
+    url(/lol/fonts/MFBanHei.woff?a13497d) format("woff"),
+    url(/lol/fonts/MFBanHei.ttf?27b8990) format("truetype"),
     url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciLz4=#MFBanHei) format("svg");
   font-style: normal;
   font-weight: normal;
@@ -3972,8 +3972,13 @@ a:visited {
 
 @-webkit-keyframes zoomInDownScale {
   from {
+    opacity: 0;
     -webkit-transform: translateY(-50%) scale(4);
     transform: translateY(-50%) scale(4);
+  }
+
+  35% {
+    opacity: 1;
   }
 
   to {
@@ -3984,8 +3989,13 @@ a:visited {
 
 @keyframes zoomInDownScale {
   from {
+    opacity: 0;
     -webkit-transform: translateY(-50%) scale(4);
     transform: translateY(-50%) scale(4);
+  }
+
+  35% {
+    opacity: 1;
   }
 
   to {
@@ -4267,7 +4277,6 @@ img {
   background: url(/lol/assets/star.svg?dac3250) no-repeat center / contain;
 }
 
-#quiz .starWrapper .wrong::before,
 #quiz .starWrapper .right::before {
   content: '';
   display: inline-block;
@@ -4276,22 +4285,17 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: no-repeat center / contain;
+  background: url(/lol/assets/starRight.svg?0621661) no-repeat center / contain;
+  -webkit-animation: zoomInDownScale 0.6s ease-in;
+  animation: zoomInDownScale 0.6s ease-in;
 }
 
-.hairlines #quiz .starWrapper .wrong::before,
 .hairlines #quiz .starWrapper .right::before {
   top: -0.5px;
 }
 
-#quiz .starWrapper .wrong::before {
-  background-image: url(/lol/assets/starWrong.svg?5883ccd);
-}
-
-#quiz .starWrapper .right::before {
-  background-image: url(/lol/assets/starRight.svg?0621661);
-  -webkit-animation: zoomInDownScale 0.6s ease-in;
-  animation: zoomInDownScale 0.6s ease-in;
+#quiz .starWrapper .wrong {
+  background-image: url(/lol/assets/starWrong.svg?4861dee);
 }
 
 #quiz .timerWrapper {
