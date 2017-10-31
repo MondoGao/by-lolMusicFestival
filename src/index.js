@@ -4,8 +4,10 @@ import './index.css';
 
 import { initLoad } from './scripts/loader';
 
+import audioController from './scripts/audioController';
 import quizer from './scripts/quizer';
 import { switchNextPage, configWechat } from './scripts/helpers';
+import audioNoop from './sounds/noop.mp3';
 
 initLoad();
 quizer.init();
@@ -15,7 +17,15 @@ $(() => {
   const $share = $('#share');
 
   $('#btnStart').on('click', () => {
+    audioController.switchAudio(audioNoop);
+    audioController.play();
+    audioController.onPlay = () => {
+      quizer.sync();
+      audioController.onPlay = undefined;
+    };
+
     $('#audioStart')[0].play();
+
     switchNextPage('home', 'load');
     quizer.load('quiz');
 
