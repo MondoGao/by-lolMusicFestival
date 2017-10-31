@@ -9,11 +9,13 @@ import { switchNextPage, configWechat } from './scripts/helpers';
 
 initLoad();
 quizer.init();
+$('#audioWelcome')[0].play();
 
 $(() => {
   const $share = $('#share');
 
   $('#btnStart').on('click', () => {
+    $('#audioStart')[0].play();
     switchNextPage('home', 'load');
     quizer.load('quiz');
 
