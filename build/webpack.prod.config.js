@@ -25,6 +25,7 @@ module.exports = smart(baseConfig, {
                 options: {
                   sourceMap: true,
                   importLoaders: 1,
+                  minimize: true,
                 },
               },
               'postcss-loader',
