@@ -23,7 +23,7 @@ const fontmin = new Fontmin()
   .use(Fontmin.ttf2svg())
   .dest(destPath);
 
-fontmin.run((err, files, stream) => {
+fontmin.run((err) => {
   if (err) {
     console.error(err);
   }

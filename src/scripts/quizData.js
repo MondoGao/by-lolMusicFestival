@@ -433,7 +433,7 @@ export const quizData = [
     desc: '由Alan Walker唱的这首歌的创作的曲名是？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 0,
     options: [
       '山隐之焰奥恩',
@@ -445,7 +445,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 2,
     options: [
       '源计划联合艾希',
@@ -457,7 +457,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 2,
     options: [
       '山隐之焰奥恩',
@@ -469,7 +469,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 1,
     options: [
       '山隐之焰奥恩',
@@ -481,7 +481,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 2,
     options: [
       '山隐之焰奥恩',
@@ -493,7 +493,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 3,
     options: [
       '诺克萨斯之手德莱厄斯',
@@ -505,7 +505,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 0,
     options: [
       '海兽祭司俄洛伊',
@@ -517,7 +517,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 0,
     options: [
       '探险家伊泽瑞尔',
@@ -529,7 +529,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 1,
     options: [
       '源计划林易',
@@ -541,7 +541,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 0,
     options: [
       '德玛西亚之翼奎因',
@@ -553,7 +553,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 1,
     options: [
       '德玛西亚之翼奎因',
@@ -565,7 +565,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 0,
     options: [
       '九尾妖狐阿狸',
@@ -577,7 +577,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 1,
     options: [
       '符文法师瑞兹',
@@ -589,7 +589,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 3,
     options: [
       '符文法师瑞兹',
@@ -601,7 +601,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 0,
     options: [
       '星之守护者厄运小姐',
@@ -613,7 +613,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 1,
     options: [
       '星之守护者厄运小姐',
@@ -625,7 +625,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 1,
     options: [
       '大元素使拉克丝',
@@ -637,7 +637,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 1,
     options: [
       '大元素使拉克丝',
@@ -649,7 +649,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 0,
     options: [
       '丧尸杀手金克丝',
@@ -661,7 +661,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 1,
     options: [
       '丧尸杀手金克丝',
@@ -673,7 +673,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 0,
     options: [
       '圣锤之毅波比',
@@ -685,7 +685,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 1,
     options: [
       '圣锤之毅波比',
@@ -697,7 +697,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 0,
     options: [
       '电玩勇者锐雯',
@@ -709,7 +709,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 1,
     options: [
       '电玩勇者锐雯',
@@ -721,7 +721,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 1,
     options: [
       '电玩勇者锐雯',
@@ -733,7 +733,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 0,
     options: [
       '未来战士凯特琳',
@@ -745,7 +745,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 0,
     options: [
       'DJ娑娜',
@@ -757,7 +757,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 3,
     options: [
       'DJ娑娜',
@@ -769,7 +769,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 3,
     options: [
       '霸天零式赛恩',
@@ -781,7 +781,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 0,
     options: [
       '殇之木乃伊阿木木',
@@ -793,7 +793,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 1,
     options: [
       '岩雀塔莉垭',
@@ -805,7 +805,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 1,
     options: [
       '岩雀塔莉垭',
@@ -817,7 +817,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 3,
     options: [
       '大元素使拉克丝',
@@ -829,7 +829,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 1,
     options: [
       '大元素使拉克丝',
@@ -841,7 +841,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 2,
     options: [
       '大元素使拉克丝',
@@ -853,7 +853,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 3,
     options: [
       '大元素使拉克丝',
@@ -865,7 +865,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 0,
     options: [
       '荣耀行刑官德莱文',
@@ -877,7 +877,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 2,
     options: [
       '圣枪游侠卢锡安',
@@ -889,7 +889,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 1,
     options: [
       '圣枪游侠卢锡安',
@@ -901,7 +901,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 0,
     options: [
       '邪恶小法师维迦',
@@ -913,7 +913,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 3,
     options: [
       '电玩勇者锐雯',
@@ -925,7 +925,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 2,
     options: [
       '冰霜女巫',
@@ -937,7 +937,7 @@ export const quizData = [
     desc: '猜猜这是谁的歌？',
   },
   {
-    hasImage: false,
+    hasImage: true,
     answerIndex: 0,
     options: [
       '时间刺客艾克',

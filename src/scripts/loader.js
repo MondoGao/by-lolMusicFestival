@@ -41,6 +41,7 @@ export function createLoader(regx, include = true, toPage = 'home') {
   resetStrip();
 
   let failTimer;
+  let adTimer;
 
   return new Promise((resolve) => {
     const start = Date.now();
@@ -59,6 +60,7 @@ export function createLoader(regx, include = true, toPage = 'home') {
     });
     loader.on('complete', () => {
       clearTimeout(failTimer);
+      clearTimeout(adTimer);
 
       $loadingStrip.css('left', '0');
 
@@ -83,7 +85,7 @@ export function createLoader(regx, include = true, toPage = 'home') {
 
     loader.load();
 
-    setTimeout(showLoadingFestivalTip, 3000);
+    adTimer = setTimeout(showLoadingFestivalTip, 3000);
     failTimer = setTimeout(handleLoadingFailed, 40000);
   });
 }
