@@ -124,6 +124,7 @@ img {
 
   & h4 {
     margin-top: 120px;
+    padding: 0 5px;
     color: var(--paraColor);
     letter-spacing: 4.44px;
     font-size: 32px;
