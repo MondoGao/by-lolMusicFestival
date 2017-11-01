@@ -18,15 +18,15 @@
     </head>
     <body>
       <div style="display:none;">
-        <audio id="audio" src="<%= require('./sounds/noop.mp3') %>" style="display: none;">
+        <audio id="audio"src="<%= require('./sounds/noop.mp3') %>" style="display: none;">
           请更新微信版本哦~
         </audio>
-        <audio id="audioWelcome" src="<%= require('./sounds/welcome.mp3') %>"></audio>
-        <audio id="audioStart" src="<%= require('./sounds/start.mp3') %>"></audio>
-        <audio id="audioFirst" src="<%= require('./sounds/first.mp3') %>"></audio>
-        <audio id="audioShutdown" src="<%= require('./sounds/shutdown.mp3') %>"></audio>
+        <audio id="audioWelcome" class="audioEffect" src="<%= require('./sounds/welcome.mp3') %>"></audio>
+        <audio id="audioStart" class="audioEffect" src="<%= require('./sounds/start.mp3') %>"></audio>
+        <audio id="audioFirst" class="audioEffect" src="<%= require('./sounds/first.mp3') %>"></audio>
+        <audio id="audioShutdown" class="audioEffect" src="<%= require('./sounds/shutdown.mp3') %>"></audio>
         <% for(let i = 1; i < 7; i++) { %>
-        <audio id="audioKill<%= i %>" src="<%= require(`./sounds/${i}k.mp3`) %>"></audio>
+        <audio id="audioKill<%= i %>" class="audioEffect" src="<%= require(`./sounds/${i}k.mp3`) %>"></audio>
         <% } %>
       </div>
       <div id="load" class="page show">
