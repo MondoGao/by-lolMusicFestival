@@ -21,8 +21,9 @@ $(() => {
     const $effects = $('.audioEffect');
     const index = Math.round(Math.random() * ($effects.length - 1));
 
-    console.log($effects);
     $effects[index].play();
+
+    _czc.push(["_trackEvent", '彩蛋', '点击']);
   });
 
   $('#btnStart').on('click', () => {
