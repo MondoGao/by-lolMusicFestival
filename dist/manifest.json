@@ -308,11 +308,11 @@
   "/lol/assets/starRight.svg": "/lol/assets/starRight.svg?0621661",
   "/lol/assets/starWrong.svg": "/lol/assets/starWrong.svg?4861dee",
   "/lol/assets/timer.png": "/lol/assets/timer.png?435525a",
-  "/lol/fonts/MFBanHei.eot": "/lol/fonts/MFBanHei.eot?bdf2ad3",
-  "/lol/fonts/MFBanHei.ttf": "/lol/fonts/MFBanHei.ttf?ef89e80",
-  "/lol/fonts/MFBanHei.woff": "/lol/fonts/MFBanHei.woff?c703449",
-  "/lol/index.css": "/lol/styles/index.8e9c50f2d5be0a8c25bc.css",
-  "/lol/index.js": "/lol/scripts/index.8e9c50f2d5be0a8c25bc.js",
+  "/lol/fonts/MFBanHei.eot": "/lol/fonts/MFBanHei.eot?f160bea",
+  "/lol/fonts/MFBanHei.ttf": "/lol/fonts/MFBanHei.ttf?1ff86a9",
+  "/lol/fonts/MFBanHei.woff": "/lol/fonts/MFBanHei.woff?c300782",
+  "/lol/index.css": "/lol/styles/index.f625c34da99d54269c4e.css",
+  "/lol/index.js": "/lol/scripts/index.f625c34da99d54269c4e.js",
   "/lol/sounds/1k.mp3": "/lol/sounds/1k.mp3?f6fffdf",
   "/lol/sounds/2k.mp3": "/lol/sounds/2k.mp3?6c6691e",
   "/lol/sounds/3k.mp3": "/lol/sounds/3k.mp3?784e8f7",
@@ -324,5 +324,5 @@
   "/lol/sounds/shutdown.mp3": "/lol/sounds/shutdown.mp3?858a1aa",
   "/lol/sounds/start.mp3": "/lol/sounds/start.mp3?1222293",
   "/lol/sounds/welcome.mp3": "/lol/sounds/welcome.mp3?bab5c86",
-  "/lol/vendor.js": "/lol/scripts/vendor.8e9c50f2d5be0a8c25bc.js"
+  "/lol/vendor.js": "/lol/scripts/vendor.f625c34da99d54269c4e.js"
 }
