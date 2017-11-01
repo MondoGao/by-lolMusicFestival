@@ -16,6 +16,15 @@ $('#audioWelcome')[0].play();
 $(() => {
   const $share = $('#share');
 
+  // easter egg!
+  $('#medal').on('click', () => {
+    const $effects = $('.audioEffect');
+    const index = Math.round(Math.random() * ($effects.length - 1));
+
+    console.log($effects);
+    $effects[index].play();
+  });
+
   $('#btnStart').on('click', () => {
     // hack for iOS
     audioController.switchAudio(audioNoop);
