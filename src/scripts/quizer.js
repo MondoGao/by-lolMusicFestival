@@ -153,7 +153,7 @@ const quizer = {
 
     reconfigWechat({
       link: window.location.href.split('#')[0],
-      title: '英雄联盟音乐排位赛',
+      title: '是时候表演真正的技术了！|英雄联盟排位赛',
       imgUrl: imgIcon,
       desc: rank.shareDesc,
       label: '',

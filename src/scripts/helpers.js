@@ -38,12 +38,12 @@ export function getjssdkConfig(url) {
     .then(data => data.json());
 }
 
-export function reconfigWechat({ link, title, imgUrl, desc, label }) {
+export function reconfigWechat({ link, title, imgUrl, desc, label }, flip = true) {
   const realImgUrl = imgIcon.match(/hustonline/) ? imgIcon : `http://weixin.bingyan-tech.hustonline.net${imgIcon}`;
 
   wx.onMenuShareTimeline({
     link,
-    title: desc,
+    title: flip ? desc : title,
     imgUrl: realImgUrl,
     success() {
       _czc.push(['_trackEvent', '微信', '分享', '朋友圈', 1]);
@@ -112,11 +112,11 @@ export function configWechat() {
 
         reconfigWechat({
           link: window.location.href.split('#')[0],
-          title: '英雄联盟音乐排位赛',
+          title: '哼，一个能打的都没有|英雄联盟音乐排位赛',
           imgUrl: imgIcon,
-          desc: '最强王者的你，也不过是音乐排位赛的菜鸡！| 英雄联盟音乐排位赛',
+          desc: '是时候展现真正的技术了|英雄联盟音乐排位赛',
           label: '',
-        });
+        }, false);
       });
 
       wx.error(() => {
