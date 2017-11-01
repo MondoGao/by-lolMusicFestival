@@ -17,6 +17,7 @@ $(() => {
   const $share = $('#share');
 
   $('#btnStart').on('click', () => {
+    // hack for iOS
     audioController.switchAudio(audioNoop);
     audioController.play();
     audioController.onPlay = () => {
